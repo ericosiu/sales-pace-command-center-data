@@ -1,6 +1,7 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-06T23:15:03.273384+00:00",
+  "generated_at_utc": "2026-06-07T20:51:21.889293+00:00",
+  "period": "weekly",
   "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
   "status": "OFF TRACK",
   "trend": "No activity / no movement",
@@ -29,7 +30,7 @@
       "prior_week": 0,
       "delta": 0,
       "direction": "No activity / no movement",
-      "operating_implication": "No proposals; inspect SQL→proposal conversion"
+      "operating_implication": "No proposals; inspect SQL\u2192proposal conversion"
     },
     "revenue_booked": {
       "this_week": 0,
@@ -52,6 +53,5 @@
       "tab": "Actions Log",
       "range": "A1:Z200"
     }
-  ],
-  "period": "weekly"
+  ]
 }

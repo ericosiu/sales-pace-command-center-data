@@ -1,12 +1,13 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-06T23:15:03.273384+00:00",
+  "generated_at_utc": "2026-06-07T20:51:21.889293+00:00",
+  "period": "daily",
   "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
   "status": "OFF TRACK",
   "upside_status": "UPSIDE GAP",
   "trend": "No activity / no movement",
   "target": 10000000,
-  "target_to_date": 3626374,
+  "target_to_date": 3681319,
   "actual_revenue": 401600,
   "crm_forecast": 1870600,
   "capacity_model": 6966378,
@@ -23,17 +24,17 @@
   "actual_activity_yesterday_today": "0 new pipeline / 7 modified",
   "risk_counts": {
     "open_deal_count": 163,
-    "stale_open_deals_gt_30d": 116,
-    "open_deals_missing_next_step": 149,
-    "open_deals_missing_next_activity": 157,
-    "deals_missing_close_date": 295,
-    "deals_missing_owner": 154,
-    "recent_meeting_activity_14d": 8,
     "open_missing_next_step": 149,
     "stale_open_deals_30d": 116,
     "open_missing_next_activity": 157,
     "missing_close_date": 295,
-    "missing_owner": 154
+    "missing_owner": 154,
+    "recent_meeting_activity_14d": 8,
+    "stale_open_deals_gt_30d": 116,
+    "open_deals_missing_next_step": 149,
+    "open_deals_missing_next_activity": 157,
+    "deals_missing_close_date": 295,
+    "deals_missing_owner": 154
   },
   "behavior_signals": {
     "gong_calls_7d": 58,
@@ -77,6 +78,5 @@
       "tab": "Trend Data",
       "range": "A1:Z200"
     }
-  ],
-  "period": "daily"
+  ]
 }
