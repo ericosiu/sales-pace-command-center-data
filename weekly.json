@@ -1,0 +1,57 @@
+{
+  "version": "v1",
+  "generated_at_utc": "2026-06-06T23:15:03.273384+00:00",
+  "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
+  "status": "OFF TRACK",
+  "trend": "No activity / no movement",
+  "biggest_weekly_miss": "CRM Hygiene",
+  "recovery_action": "Assign owner for 149 no-next-step deals and 116 stale open deals; daily standup starts from Deal Risk Signals until cleanup is owned.",
+  "owner": "Eric Siu",
+  "due_date": "2026-06-08",
+  "rule": "Zero vs zero is No activity / no movement, not Better/stable.",
+  "weekly_summary": {
+    "closed_won_deals": {
+      "this_week": 0,
+      "prior_week": 0,
+      "delta": 0,
+      "direction": "No activity / no movement",
+      "operating_implication": "No closes in either week; inspect late-stage coverage"
+    },
+    "completed_discoveries": {
+      "this_week": 0,
+      "prior_week": 0,
+      "delta": 0,
+      "direction": "No activity / no movement",
+      "operating_implication": "No discovery activity; inspect demand gen / outbound"
+    },
+    "proposals_sent": {
+      "this_week": 0,
+      "prior_week": 0,
+      "delta": 0,
+      "direction": "No activity / no movement",
+      "operating_implication": "No proposals; inspect SQL→proposal conversion"
+    },
+    "revenue_booked": {
+      "this_week": 0,
+      "prior_week": 0,
+      "delta": 0,
+      "direction": "No activity / no movement",
+      "operating_implication": "No booked revenue in either week; do not call stable good"
+    }
+  },
+  "sources": [
+    {
+      "tab": "Weekly Standup",
+      "range": "A1:Z200"
+    },
+    {
+      "tab": "Dashboard",
+      "range": "A1:Z200"
+    },
+    {
+      "tab": "Actions Log",
+      "range": "A1:Z200"
+    }
+  ],
+  "period": "weekly"
+}

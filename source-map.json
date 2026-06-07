@@ -1,0 +1,354 @@
+{
+  "version": "v1",
+  "generated_at_utc": "2026-06-06T23:15:03.273384+00:00",
+  "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
+  "path_written": "/home/alfredclaw/sales-pace-command-center/data",
+  "requested_path_available": false,
+  "tabs_read": [
+    "Dashboard",
+    "Daily Standup",
+    "Weekly Standup",
+    "HubSpot Daily Snapshot",
+    "Deal Risk Signals",
+    "Gong + Granola Insights",
+    "Actions Log",
+    "Paid + Content Math",
+    "Trend Data"
+  ],
+  "metrics": [
+    {
+      "metric": "daily.status",
+      "source_tab": "Daily Standup",
+      "upstream": "Dashboard / HubSpot forecast vs $10M",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Daily Standup answer block and Today snapshot: On track / off track? / 10M status."
+    },
+    {
+      "metric": "daily.upside_status",
+      "source_tab": "Daily Standup",
+      "upstream": "$20M upside scoreboard",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Today snapshot: 20M upside status."
+    },
+    {
+      "metric": "daily.trend",
+      "source_tab": "Daily Standup",
+      "upstream": "Weekly activity direction",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Daily Standup answer block: Trend better / worse?."
+    },
+    {
+      "metric": "daily.target",
+      "source_tab": "Dashboard",
+      "upstream": "Assumptions / operating target",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Dashboard operating target card: $10M operating target."
+    },
+    {
+      "metric": "daily.target_to_date",
+      "source_tab": "Daily Standup",
+      "upstream": "Trend Data target pace",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Today snapshot: Target-to-date."
+    },
+    {
+      "metric": "daily.actual_revenue",
+      "source_tab": "HubSpot Daily Snapshot",
+      "upstream": "HubSpot CRM",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T13:32:47.690192+00:00",
+      "evidence_note": "Closed-won revenue (period)."
+    },
+    {
+      "metric": "daily.crm_forecast",
+      "source_tab": "HubSpot Daily Snapshot",
+      "upstream": "HubSpot CRM",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T13:32:47.690192+00:00",
+      "evidence_note": "Forecast: closed-won + weighted open."
+    },
+    {
+      "metric": "daily.capacity_model",
+      "source_tab": "Dashboard",
+      "upstream": "Top-down capacity model",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Forecast reconciliation bridge: Top-down capacity model."
+    },
+    {
+      "metric": "daily.capacity_not_backed_by_crm",
+      "source_tab": "Dashboard",
+      "upstream": "Dashboard reconciliation",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Capacity not yet backed by CRM."
+    },
+    {
+      "metric": "daily.gap_to_target",
+      "source_tab": "Daily Standup",
+      "upstream": "Forecast vs $10M target",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Today snapshot: Gap to $10M."
+    },
+    {
+      "metric": "daily.open_pipeline",
+      "source_tab": "HubSpot Daily Snapshot",
+      "upstream": "HubSpot CRM",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T13:32:47.690192+00:00",
+      "evidence_note": "Open pipeline."
+    },
+    {
+      "metric": "daily.weighted_pipeline",
+      "source_tab": "HubSpot Daily Snapshot",
+      "upstream": "HubSpot CRM",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T13:32:47.690192+00:00",
+      "evidence_note": "Weighted open pipeline."
+    },
+    {
+      "metric": "daily.biggest_gap",
+      "source_tab": "Actions Log",
+      "upstream": "Actions Log",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "First open gap metric surfaced by Daily Standup/Dashboard."
+    },
+    {
+      "metric": "daily.recovery_action",
+      "source_tab": "Actions Log",
+      "upstream": "Actions Log",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "First open recovery action surfaced by Daily Standup/Dashboard."
+    },
+    {
+      "metric": "daily.owner",
+      "source_tab": "Actions Log",
+      "upstream": "Actions Log",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Owner for first open recovery action."
+    },
+    {
+      "metric": "daily.due_date",
+      "source_tab": "Actions Log",
+      "upstream": "Actions Log",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Due date for first open recovery action."
+    },
+    {
+      "metric": "daily.required_activity_today",
+      "source_tab": "Daily Standup",
+      "upstream": "Deal Risk Signals",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": "2026-06-05T00:17:44Z",
+      "evidence_note": "Today snapshot required activity today."
+    },
+    {
+      "metric": "daily.actual_activity_yesterday_today",
+      "source_tab": "Daily Standup",
+      "upstream": "HubSpot Daily Snapshot",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T13:32:47.690192+00:00",
+      "evidence_note": "Today snapshot actual activity yesterday/today."
+    },
+    {
+      "metric": "daily.risk_counts.open_deal_count",
+      "source_tab": "Deal Risk Signals",
+      "upstream": "HubSpot Daily Snapshot/local artifact",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T00:17:44Z",
+      "evidence_note": "Open deal count."
+    },
+    {
+      "metric": "daily.risk_counts.stale_open_deals_gt_30d",
+      "source_tab": "Deal Risk Signals",
+      "upstream": "HubSpot",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T00:17:44Z",
+      "evidence_note": "Stale open deals >30d."
+    },
+    {
+      "metric": "daily.risk_counts.open_deals_missing_next_step",
+      "source_tab": "Deal Risk Signals",
+      "upstream": "HubSpot",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T00:17:44Z",
+      "evidence_note": "Open deals missing next step."
+    },
+    {
+      "metric": "daily.risk_counts.open_deals_missing_next_activity",
+      "source_tab": "Deal Risk Signals",
+      "upstream": "HubSpot",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T00:17:44Z",
+      "evidence_note": "Open deals missing next activity."
+    },
+    {
+      "metric": "daily.risk_counts.deals_missing_close_date",
+      "source_tab": "Deal Risk Signals",
+      "upstream": "HubSpot local artifact",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T00:17:44Z",
+      "evidence_note": "Deals missing close date."
+    },
+    {
+      "metric": "daily.risk_counts.deals_missing_owner",
+      "source_tab": "Deal Risk Signals",
+      "upstream": "HubSpot local artifact",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T00:17:44Z",
+      "evidence_note": "Deals missing owner."
+    },
+    {
+      "metric": "daily.behavior_signals.gong_calls_7d",
+      "source_tab": "Gong + Granola Insights",
+      "upstream": "Gong API",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T00:17:43Z",
+      "evidence_note": "Gong calls last 7d."
+    },
+    {
+      "metric": "daily.behavior_signals.gong_calls_14d",
+      "source_tab": "Gong + Granola Insights",
+      "upstream": "Gong API",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T00:17:43Z",
+      "evidence_note": "Gong calls last 14d."
+    },
+    {
+      "metric": "daily.behavior_signals.gong_next_step_call_rate",
+      "source_tab": "Gong + Granola Insights",
+      "upstream": "Gong detail text scan",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T00:17:43Z",
+      "evidence_note": "Next-step language on calls."
+    },
+    {
+      "metric": "daily.behavior_signals.meeting_to_action_quality",
+      "source_tab": "Gong + Granola Insights",
+      "upstream": "Granola API",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T00:17:43Z",
+      "evidence_note": "Meeting-to-action quality."
+    },
+    {
+      "metric": "daily.behavior_signals.owner_date_discipline",
+      "source_tab": "Gong + Granola Insights",
+      "upstream": "Granola API",
+      "source_type": "connector-derived",
+      "refreshed_at_utc": "2026-06-05T00:17:43Z",
+      "evidence_note": "Owner/date discipline."
+    },
+    {
+      "metric": "weekly.status",
+      "source_tab": "Weekly Standup",
+      "upstream": "Dashboard $10M status",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Weekly question: On track / off track?."
+    },
+    {
+      "metric": "weekly.trend",
+      "source_tab": "Weekly Standup",
+      "upstream": "Weekly activity vs prior week",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Weekly question: Trend better / worse?."
+    },
+    {
+      "metric": "weekly.biggest_weekly_miss",
+      "source_tab": "Weekly Standup",
+      "upstream": "Actions Log first open gap",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Biggest weekly miss."
+    },
+    {
+      "metric": "weekly.recovery_action",
+      "source_tab": "Weekly Standup",
+      "upstream": "Actions Log first open action",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Recovery action."
+    },
+    {
+      "metric": "weekly.owner",
+      "source_tab": "Weekly Standup",
+      "upstream": "Actions Log owner",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Owner."
+    },
+    {
+      "metric": "weekly.due_date",
+      "source_tab": "Weekly Standup",
+      "upstream": "Actions Log due date",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Due date."
+    },
+    {
+      "metric": "weekly.weekly_summary.closed_won_deals",
+      "source_tab": "Weekly Standup",
+      "upstream": "Weekly activity summary",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "This Week Summary: Closed won deals."
+    },
+    {
+      "metric": "weekly.weekly_summary.completed_discoveries",
+      "source_tab": "Weekly Standup",
+      "upstream": "Weekly activity summary",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "This Week Summary: Completed discoveries."
+    },
+    {
+      "metric": "weekly.weekly_summary.proposals_sent",
+      "source_tab": "Weekly Standup",
+      "upstream": "Weekly activity summary",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "This Week Summary: Proposals sent."
+    },
+    {
+      "metric": "weekly.weekly_summary.revenue_booked",
+      "source_tab": "Weekly Standup",
+      "upstream": "Weekly activity summary",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "This Week Summary: Revenue booked."
+    },
+    {
+      "metric": "paid_content.base_paid_budget",
+      "source_tab": "Paid + Content Math",
+      "upstream": "Assumptions",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": null,
+      "evidence_note": "Base paid monthly budget after quality proven."
+    },
+    {
+      "metric": "trend.forecast_line",
+      "source_tab": "Trend Data",
+      "upstream": "HubSpot Daily Snapshot and target pace",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": "2026-06-05T13:32:47.690192+00:00",
+      "evidence_note": "Trend Data operating lines for charts."
+    }
+  ],
+  "staleness_notes": [
+    "HubSpot Daily Snapshot refreshed_at_utc=2026-06-05T13:32:47.690192+00:00",
+    "Deal Risk Signals refreshed_at_utc=2026-06-05T00:17:44Z",
+    "Gong + Granola Insights refreshed_at_utc=2026-06-05T00:17:43Z",
+    "Dashboard, Daily Standup, Weekly Standup, Actions Log, Paid + Content Math, and Trend Data do not display explicit refreshed_at_utc values."
+  ]
+}

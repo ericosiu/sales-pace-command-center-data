@@ -1,0 +1,82 @@
+{
+  "version": "v1",
+  "generated_at_utc": "2026-06-06T23:15:03.273384+00:00",
+  "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
+  "status": "OFF TRACK",
+  "upside_status": "UPSIDE GAP",
+  "trend": "No activity / no movement",
+  "target": 10000000,
+  "target_to_date": 3626374,
+  "actual_revenue": 401600,
+  "crm_forecast": 1870600,
+  "capacity_model": 6966378,
+  "capacity_not_backed_by_crm": 5095778,
+  "gap_to_target": -8129400,
+  "open_pipeline": 4239000,
+  "weighted_pipeline": 1469000,
+  "biggest_gap": "CRM Hygiene",
+  "recovery_action": "Assign owner for 149 no-next-step deals and 116 stale open deals; daily standup starts from Deal Risk Signals until cleanup is owned.",
+  "owner": "Eric Siu",
+  "due_date": "2026-06-08",
+  "operating_implication": "Run recovery action today",
+  "required_activity_today": "Clean 149 no-next-step deals; recover 116 stale deals; book next activity for 157 deals",
+  "actual_activity_yesterday_today": "0 new pipeline / 7 modified",
+  "risk_counts": {
+    "open_deal_count": 163,
+    "stale_open_deals_gt_30d": 116,
+    "open_deals_missing_next_step": 149,
+    "open_deals_missing_next_activity": 157,
+    "deals_missing_close_date": 295,
+    "deals_missing_owner": 154,
+    "recent_meeting_activity_14d": 8,
+    "open_missing_next_step": 149,
+    "stale_open_deals_30d": 116,
+    "open_missing_next_activity": 157,
+    "missing_close_date": 295,
+    "missing_owner": 154
+  },
+  "behavior_signals": {
+    "gong_calls_7d": 58,
+    "gong_calls_14d": 110,
+    "most_recent_gong_call_days_ago": 0,
+    "gong_next_step_call_rate": 0.282,
+    "ai_wedge_call_rate": 0.327,
+    "standup_coverage_tue_fri": 0.889,
+    "meeting_to_action_quality": 0.614,
+    "owner_date_discipline": 0.364
+  },
+  "sources": [
+    {
+      "tab": "Dashboard",
+      "range": "A1:Z200"
+    },
+    {
+      "tab": "Daily Standup",
+      "range": "A1:Z200"
+    },
+    {
+      "tab": "HubSpot Daily Snapshot",
+      "range": "A1:Z200",
+      "refreshed_at_utc": "2026-06-05T13:32:47.690192+00:00"
+    },
+    {
+      "tab": "Deal Risk Signals",
+      "range": "A1:Z200",
+      "refreshed_at_utc": "2026-06-05T00:17:44Z"
+    },
+    {
+      "tab": "Gong + Granola Insights",
+      "range": "A1:Z200",
+      "refreshed_at_utc": "2026-06-05T00:17:43Z"
+    },
+    {
+      "tab": "Actions Log",
+      "range": "A1:Z200"
+    },
+    {
+      "tab": "Trend Data",
+      "range": "A1:Z200"
+    }
+  ],
+  "period": "daily"
+}
