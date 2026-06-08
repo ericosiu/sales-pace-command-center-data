@@ -1,13 +1,13 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-07T20:51:21.889293+00:00",
+  "generated_at_utc": "2026-06-08T13:30:57.598061+00:00",
   "period": "daily",
   "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
   "status": "OFF TRACK",
   "upside_status": "UPSIDE GAP",
   "trend": "No activity / no movement",
   "target": 10000000,
-  "target_to_date": 3681319,
+  "target_to_date": 3736264,
   "actual_revenue": 401600,
   "crm_forecast": 1870600,
   "capacity_model": 6966378,
@@ -21,7 +21,7 @@
   "due_date": "2026-06-08",
   "operating_implication": "Run recovery action today",
   "required_activity_today": "Clean 149 no-next-step deals; recover 116 stale deals; book next activity for 157 deals",
-  "actual_activity_yesterday_today": "0 new pipeline / 7 modified",
+  "actual_activity_yesterday_today": "0 new pipeline / 15 modified",
   "risk_counts": {
     "open_deal_count": 163,
     "open_missing_next_step": 149,
@@ -58,7 +58,7 @@
     {
       "tab": "HubSpot Daily Snapshot",
       "range": "A1:Z200",
-      "refreshed_at_utc": "2026-06-05T13:32:47.690192+00:00"
+      "refreshed_at_utc": "2026-06-08T13:30:33.189916+00:00"
     },
     {
       "tab": "Deal Risk Signals",
