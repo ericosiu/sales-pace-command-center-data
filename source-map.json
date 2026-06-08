@@ -1,6 +1,6 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-08T13:30:57.598061+00:00",
+  "generated_at_utc": "2026-06-08T23:13:33.800922+00:00",
   "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
   "path_written": "/home/alfredclaw/sales-pace-command-center/data",
   "requested_path_available": false,
@@ -61,7 +61,7 @@
       "source_tab": "HubSpot Daily Snapshot",
       "upstream": "HubSpot CRM",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-08T13:30:33.189916+00:00",
+      "refreshed_at_utc": "2026-06-08T23:12:12.443437+00:00",
       "evidence_note": "Closed-won revenue (period)."
     },
     {
@@ -69,7 +69,7 @@
       "source_tab": "HubSpot Daily Snapshot",
       "upstream": "HubSpot CRM",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-08T13:30:33.189916+00:00",
+      "refreshed_at_utc": "2026-06-08T23:12:12.443437+00:00",
       "evidence_note": "Forecast: closed-won + weighted open."
     },
     {
@@ -101,7 +101,7 @@
       "source_tab": "HubSpot Daily Snapshot",
       "upstream": "HubSpot CRM",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-08T13:30:33.189916+00:00",
+      "refreshed_at_utc": "2026-06-08T23:12:12.443437+00:00",
       "evidence_note": "Open pipeline."
     },
     {
@@ -109,7 +109,7 @@
       "source_tab": "HubSpot Daily Snapshot",
       "upstream": "HubSpot CRM",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-08T13:30:33.189916+00:00",
+      "refreshed_at_utc": "2026-06-08T23:12:12.443437+00:00",
       "evidence_note": "Weighted open pipeline."
     },
     {
@@ -149,7 +149,7 @@
       "source_tab": "Daily Standup",
       "upstream": "Deal Risk Signals",
       "source_type": "sheet-derived",
-      "refreshed_at_utc": "2026-06-05T00:17:44Z",
+      "refreshed_at_utc": "2026-06-08T23:13:26Z",
       "evidence_note": "Today snapshot required activity today."
     },
     {
@@ -157,7 +157,7 @@
       "source_tab": "Daily Standup",
       "upstream": "HubSpot Daily Snapshot",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-08T13:30:33.189916+00:00",
+      "refreshed_at_utc": "2026-06-08T23:12:12.443437+00:00",
       "evidence_note": "Today snapshot actual activity yesterday/today."
     },
     {
@@ -165,7 +165,7 @@
       "source_tab": "Deal Risk Signals",
       "upstream": "HubSpot Daily Snapshot/local artifact",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-05T00:17:44Z",
+      "refreshed_at_utc": "2026-06-08T23:13:26Z",
       "evidence_note": "Open deal count."
     },
     {
@@ -173,7 +173,7 @@
       "source_tab": "Deal Risk Signals",
       "upstream": "HubSpot",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-05T00:17:44Z",
+      "refreshed_at_utc": "2026-06-08T23:13:26Z",
       "evidence_note": "Stale open deals >30d."
     },
     {
@@ -181,7 +181,7 @@
       "source_tab": "Deal Risk Signals",
       "upstream": "HubSpot",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-05T00:17:44Z",
+      "refreshed_at_utc": "2026-06-08T23:13:26Z",
       "evidence_note": "Open deals missing next step."
     },
     {
@@ -189,7 +189,7 @@
       "source_tab": "Deal Risk Signals",
       "upstream": "HubSpot",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-05T00:17:44Z",
+      "refreshed_at_utc": "2026-06-08T23:13:26Z",
       "evidence_note": "Open deals missing next activity."
     },
     {
@@ -197,7 +197,7 @@
       "source_tab": "Deal Risk Signals",
       "upstream": "HubSpot local artifact",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-05T00:17:44Z",
+      "refreshed_at_utc": "2026-06-08T23:13:26Z",
       "evidence_note": "Deals missing close date."
     },
     {
@@ -205,7 +205,7 @@
       "source_tab": "Deal Risk Signals",
       "upstream": "HubSpot local artifact",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-05T00:17:44Z",
+      "refreshed_at_utc": "2026-06-08T23:13:26Z",
       "evidence_note": "Deals missing owner."
     },
     {
@@ -213,7 +213,7 @@
       "source_tab": "Gong + Granola Insights",
       "upstream": "Gong API",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-05T00:17:43Z",
+      "refreshed_at_utc": "2026-06-08T23:13:25Z",
       "evidence_note": "Gong calls last 7d."
     },
     {
@@ -221,7 +221,7 @@
       "source_tab": "Gong + Granola Insights",
       "upstream": "Gong API",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-05T00:17:43Z",
+      "refreshed_at_utc": "2026-06-08T23:13:25Z",
       "evidence_note": "Gong calls last 14d."
     },
     {
@@ -229,7 +229,7 @@
       "source_tab": "Gong + Granola Insights",
       "upstream": "Gong detail text scan",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-05T00:17:43Z",
+      "refreshed_at_utc": "2026-06-08T23:13:25Z",
       "evidence_note": "Next-step language on calls."
     },
     {
@@ -237,7 +237,7 @@
       "source_tab": "Gong + Granola Insights",
       "upstream": "Granola API",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-05T00:17:43Z",
+      "refreshed_at_utc": "2026-06-08T23:13:25Z",
       "evidence_note": "Meeting-to-action quality."
     },
     {
@@ -245,7 +245,7 @@
       "source_tab": "Gong + Granola Insights",
       "upstream": "Granola API",
       "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-05T00:17:43Z",
+      "refreshed_at_utc": "2026-06-08T23:13:25Z",
       "evidence_note": "Owner/date discipline."
     },
     {
@@ -341,14 +341,14 @@
       "source_tab": "Trend Data",
       "upstream": "HubSpot Daily Snapshot and target pace",
       "source_type": "sheet-derived",
-      "refreshed_at_utc": "2026-06-08T13:30:33.189916+00:00",
+      "refreshed_at_utc": "2026-06-08T23:12:12.443437+00:00",
       "evidence_note": "Trend Data operating lines for charts."
     }
   ],
   "staleness_notes": [
-    "HubSpot Daily Snapshot refreshed_at_utc=2026-06-08T13:30:33.189916+00:00",
-    "Deal Risk Signals refreshed_at_utc=2026-06-05T00:17:44Z",
-    "Gong + Granola Insights refreshed_at_utc=2026-06-05T00:17:43Z",
+    "HubSpot Daily Snapshot refreshed_at_utc=2026-06-08T23:12:12.443437+00:00",
+    "Deal Risk Signals refreshed_at_utc=2026-06-08T23:13:26Z",
+    "Gong + Granola Insights refreshed_at_utc=2026-06-08T23:13:25Z",
     "Dashboard, Daily Standup, Weekly Standup, Actions Log, Paid + Content Math, and Trend Data do not display explicit refreshed_at_utc values."
   ]
 }
