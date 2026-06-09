@@ -1,13 +1,13 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-08T23:13:33.800922+00:00",
+  "generated_at_utc": "2026-06-09T13:32:29.240346+00:00",
   "period": "daily",
   "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
   "status": "OFF TRACK",
   "upside_status": "UPSIDE GAP",
   "trend": "No activity / no movement",
   "target": 10000000,
-  "target_to_date": 3736264,
+  "target_to_date": 3791209,
   "actual_revenue": 401600,
   "crm_forecast": 1863000,
   "capacity_model": 6966378,
@@ -20,17 +20,17 @@
   "owner": "Eric Siu",
   "due_date": "2026-06-08",
   "operating_implication": "Run recovery action today",
-  "required_activity_today": "Clean 150 no-next-step deals; recover 104 stale deals; book next activity for 159 deals",
-  "actual_activity_yesterday_today": "0 new pipeline / 10 modified",
+  "required_activity_today": "Clean 150 no-next-step deals; recover 105 stale deals; book next activity for 159 deals",
+  "actual_activity_yesterday_today": "0 new pipeline / 3 modified",
   "risk_counts": {
     "open_deal_count": 164,
     "open_missing_next_step": 150,
-    "stale_open_deals_30d": 104,
+    "stale_open_deals_30d": 105,
     "open_missing_next_activity": 159,
     "missing_close_date": 295,
     "missing_owner": 154,
     "recent_meeting_activity_14d": 9,
-    "stale_open_deals_gt_30d": 104,
+    "stale_open_deals_gt_30d": 105,
     "open_deals_missing_next_step": 150,
     "open_deals_missing_next_activity": 159,
     "deals_missing_close_date": 295,
@@ -38,11 +38,11 @@
   },
   "behavior_signals": {
     "gong_calls_7d": 60,
-    "gong_calls_14d": 124,
+    "gong_calls_14d": 125,
     "most_recent_gong_call_days_ago": 0,
-    "gong_next_step_call_rate": 0.258,
-    "ai_wedge_call_rate": 0.298,
-    "standup_coverage_tue_fri": 1.125,
+    "gong_next_step_call_rate": 0.256,
+    "ai_wedge_call_rate": 0.288,
+    "standup_coverage_tue_fri": 1.0,
     "meeting_to_action_quality": 0.63,
     "owner_date_discipline": 0.391
   },
@@ -58,17 +58,17 @@
     {
       "tab": "HubSpot Daily Snapshot",
       "range": "A1:Z200",
-      "refreshed_at_utc": "2026-06-08T23:12:12.443437+00:00"
+      "refreshed_at_utc": "2026-06-09T13:31:05.305842+00:00"
     },
     {
       "tab": "Deal Risk Signals",
       "range": "A1:Z200",
-      "refreshed_at_utc": "2026-06-08T23:13:26Z"
+      "refreshed_at_utc": "2026-06-09T13:32:21Z"
     },
     {
       "tab": "Gong + Granola Insights",
       "range": "A1:Z200",
-      "refreshed_at_utc": "2026-06-08T23:13:25Z"
+      "refreshed_at_utc": "2026-06-09T13:32:20Z"
     },
     {
       "tab": "Actions Log",
