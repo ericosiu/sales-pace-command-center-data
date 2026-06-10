@@ -1,27 +1,23 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-09T13:32:29.240346+00:00",
+  "generated_at_utc": "2026-06-10T13:32:12.840461+00:00",
   "baseline": false,
   "daily_diff": {
     "baseline": false,
     "changes": [
       {
+        "field": "crm_forecast",
+        "previous": 1863000,
+        "current": 1857500
+      },
+      {
+        "field": "gap_to_target",
+        "previous": -8137000,
+        "current": -8142500
+      },
+      {
         "field": "risk_counts",
         "previous": {
-          "open_deal_count": 164,
-          "open_missing_next_step": 150,
-          "stale_open_deals_30d": 104,
-          "open_missing_next_activity": 159,
-          "missing_close_date": 295,
-          "missing_owner": 154,
-          "recent_meeting_activity_14d": 9,
-          "stale_open_deals_gt_30d": 104,
-          "open_deals_missing_next_step": 150,
-          "open_deals_missing_next_activity": 159,
-          "deals_missing_close_date": 295,
-          "deals_missing_owner": 154
-        },
-        "current": {
           "open_deal_count": 164,
           "open_missing_next_step": 150,
           "stale_open_deals_30d": 105,
@@ -34,21 +30,25 @@
           "open_deals_missing_next_activity": 159,
           "deals_missing_close_date": 295,
           "deals_missing_owner": 154
+        },
+        "current": {
+          "open_deal_count": 162,
+          "open_missing_next_step": 148,
+          "stale_open_deals_30d": 106,
+          "open_missing_next_activity": 158,
+          "missing_close_date": 295,
+          "missing_owner": 154,
+          "recent_meeting_activity_14d": 10,
+          "stale_open_deals_gt_30d": 106,
+          "open_deals_missing_next_step": 148,
+          "open_deals_missing_next_activity": 158,
+          "deals_missing_close_date": 295,
+          "deals_missing_owner": 154
         }
       },
       {
         "field": "behavior_signals",
         "previous": {
-          "gong_calls_7d": 60,
-          "gong_calls_14d": 124,
-          "most_recent_gong_call_days_ago": 0,
-          "gong_next_step_call_rate": 0.258,
-          "ai_wedge_call_rate": 0.298,
-          "standup_coverage_tue_fri": 1.125,
-          "meeting_to_action_quality": 0.63,
-          "owner_date_discipline": 0.391
-        },
-        "current": {
           "gong_calls_7d": 60,
           "gong_calls_14d": 125,
           "most_recent_gong_call_days_ago": 0,
@@ -57,6 +57,16 @@
           "standup_coverage_tue_fri": 1.0,
           "meeting_to_action_quality": 0.63,
           "owner_date_discipline": 0.391
+        },
+        "current": {
+          "gong_calls_7d": 68,
+          "gong_calls_14d": 129,
+          "most_recent_gong_call_days_ago": 0,
+          "gong_next_step_call_rate": 0.264,
+          "ai_wedge_call_rate": 0.287,
+          "standup_coverage_tue_fri": 1.0,
+          "meeting_to_action_quality": 0.614,
+          "owner_date_discipline": 0.364
         }
       }
     ]

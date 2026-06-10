@@ -1,50 +1,50 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-09T13:32:29.240346+00:00",
+  "generated_at_utc": "2026-06-10T13:32:12.840461+00:00",
   "period": "daily",
   "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
   "status": "OFF TRACK",
   "upside_status": "UPSIDE GAP",
   "trend": "No activity / no movement",
   "target": 10000000,
-  "target_to_date": 3791209,
+  "target_to_date": 3846154,
   "actual_revenue": 401600,
-  "crm_forecast": 1863000,
-  "capacity_model": 6966378,
-  "capacity_not_backed_by_crm": 5103378,
-  "gap_to_target": -8137000,
-  "open_pipeline": 4231000,
-  "weighted_pipeline": 1461400,
+  "crm_forecast": 1857500,
+  "capacity_model": 6580214,
+  "capacity_not_backed_by_crm": 4722714,
+  "gap_to_target": -8142500,
+  "open_pipeline": 4216000,
+  "weighted_pipeline": 1455900,
   "biggest_gap": "CRM Hygiene",
   "recovery_action": "Assign owner for 149 no-next-step deals and 116 stale open deals; daily standup starts from Deal Risk Signals until cleanup is owned.",
   "owner": "Eric Siu",
   "due_date": "2026-06-08",
   "operating_implication": "Run recovery action today",
-  "required_activity_today": "Clean 150 no-next-step deals; recover 105 stale deals; book next activity for 159 deals",
-  "actual_activity_yesterday_today": "0 new pipeline / 3 modified",
+  "required_activity_today": "Clean 148 no-next-step deals; recover 106 stale deals; book next activity for 158 deals",
+  "actual_activity_yesterday_today": "15000 new pipeline / 51 modified",
   "risk_counts": {
-    "open_deal_count": 164,
-    "open_missing_next_step": 150,
-    "stale_open_deals_30d": 105,
-    "open_missing_next_activity": 159,
+    "open_deal_count": 162,
+    "open_missing_next_step": 148,
+    "stale_open_deals_30d": 106,
+    "open_missing_next_activity": 158,
     "missing_close_date": 295,
     "missing_owner": 154,
-    "recent_meeting_activity_14d": 9,
-    "stale_open_deals_gt_30d": 105,
-    "open_deals_missing_next_step": 150,
-    "open_deals_missing_next_activity": 159,
+    "recent_meeting_activity_14d": 10,
+    "stale_open_deals_gt_30d": 106,
+    "open_deals_missing_next_step": 148,
+    "open_deals_missing_next_activity": 158,
     "deals_missing_close_date": 295,
     "deals_missing_owner": 154
   },
   "behavior_signals": {
-    "gong_calls_7d": 60,
-    "gong_calls_14d": 125,
+    "gong_calls_7d": 68,
+    "gong_calls_14d": 129,
     "most_recent_gong_call_days_ago": 0,
-    "gong_next_step_call_rate": 0.256,
-    "ai_wedge_call_rate": 0.288,
+    "gong_next_step_call_rate": 0.264,
+    "ai_wedge_call_rate": 0.287,
     "standup_coverage_tue_fri": 1.0,
-    "meeting_to_action_quality": 0.63,
-    "owner_date_discipline": 0.391
+    "meeting_to_action_quality": 0.614,
+    "owner_date_discipline": 0.364
   },
   "sources": [
     {
@@ -58,17 +58,17 @@
     {
       "tab": "HubSpot Daily Snapshot",
       "range": "A1:Z200",
-      "refreshed_at_utc": "2026-06-09T13:31:05.305842+00:00"
+      "refreshed_at_utc": "2026-06-10T13:30:42.150688+00:00"
     },
     {
       "tab": "Deal Risk Signals",
       "range": "A1:Z200",
-      "refreshed_at_utc": "2026-06-09T13:32:21Z"
+      "refreshed_at_utc": "2026-06-10T13:31:57Z"
     },
     {
       "tab": "Gong + Granola Insights",
       "range": "A1:Z200",
-      "refreshed_at_utc": "2026-06-09T13:32:20Z"
+      "refreshed_at_utc": "2026-06-10T13:31:56Z"
     },
     {
       "tab": "Actions Log",
