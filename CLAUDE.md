@@ -49,6 +49,29 @@ to answer, in under 30 seconds of reading:
 6. Gong/Granola connectors (signals currently carried from sheet, flagged stale);
    `hs_latest_meeting_activity` is hidden in the portal — unhide or drop the metric.
 
+## Pipeline scoping (discovered 2026-06-11, live CRM)
+Portal-wide aggregates mix four pipelines and mislead. Per-pipeline open deals:
+Enterprise 27 / $2,616,000 (18 missing next step); Karrot ABM 105 / $162,000
+(101 missing next step — automation noise); Upsell 4 / $534,000; Single Brain
+6 / $100,000. Hygiene and risk metrics MUST be reported per-pipeline; the
+working set that matters is Enterprise + SB + Upsell (~$3.25M), not the
+headline 142/128 counts.
+
+## Presentation spec (2026-06-11)
+Eric's 13-slide standup deck (uploads/0a0cebab-20260611dailystandup_1.html) is the
+target layout: topline current/target/gap table, named owner + due date on every
+action, what-one-close-costs funnel, required-vs-actual lanes, first-touch SLA,
+gray "not wired" pills for uninstrumented metrics. Its DATA is unverified —
+known conflicts vs CRM: closed-won $1.20M (CRM: $824.6K CY2026 / $401.6K Q2+Q3),
+"zero deals created 6/10" (CRM: 4 / $270K), ACV $180K (sheet-approved ASP: $100K).
+Lead-level slides contain client names → private deploy only, NEVER this repo.
+
+## Open reconciliation questions (Eric to answer)
+1. Which pipelines count toward standup status — Enterprise+SB only, or all four?
+2. Canonical ACV: $180K (deck) or $100K (sheet-approved)?
+3. What generated the 13-slide deck / where do $1.20M closed-won and MQL/SAL/SQL
+   stage data come from?
+
 ## Leverage reminder
 This system is instrumentation (~3/10 revenue leverage). It exists to point the daily
 standup at the actual leverage: the discovery→proposal chokepoint and the no-next-step
