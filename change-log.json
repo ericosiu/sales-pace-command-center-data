@@ -1,78 +1,154 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-10T13:32:12.840461+00:00",
+  "generated_at_utc": "2026-06-11T00:40:14.311807+00:00",
   "baseline": false,
   "daily_diff": {
     "baseline": false,
+    "compared_against": "2026-06-10T13:32:12.840461+00:00 snapshot (git 975f388) — yesterday's published daily.json",
     "changes": [
       {
         "field": "crm_forecast",
-        "previous": 1863000,
-        "current": 1857500
+        "previous": 1857500,
+        "current": 1992000,
+        "note": "+$134,500 — weighted pipeline rose; now sourced live from HubSpot instead of sheet snapshot"
       },
       {
         "field": "gap_to_target",
-        "previous": -8137000,
-        "current": -8142500
+        "previous": -8142500,
+        "current": -8008000,
+        "note": "Improved $134,500 on forecast movement; still OFF TRACK"
+      },
+      {
+        "field": "open_pipeline",
+        "previous": 4216000,
+        "current": 3412000,
+        "note": "-$804,000 — only $38K explained by 4 closed-lost deals this week; flagged needs-verification in source-map contradictions"
+      },
+      {
+        "field": "weighted_pipeline",
+        "previous": 1455900,
+        "current": 1590400,
+        "note": "+$134,500"
+      },
+      {
+        "field": "capacity_not_backed_by_crm",
+        "previous": 4722714,
+        "current": 4588214,
+        "note": "Recomputed: capacity model unchanged ($6,580,214), CRM forecast up"
+      },
+      {
+        "field": "actual_revenue",
+        "previous": 401600,
+        "current": 401600,
+        "note": "No change — zero new closed-won; verified live against CRM"
+      },
+      {
+        "field": "actual_activity_yesterday_today",
+        "previous": "15000 new pipeline / 51 modified",
+        "current": "270000 new pipeline / 23 modified",
+        "note": "4 new deals created Jun 10-11 totaling $270K"
       },
       {
         "field": "risk_counts",
         "previous": {
-          "open_deal_count": 164,
-          "open_missing_next_step": 150,
-          "stale_open_deals_30d": 105,
-          "open_missing_next_activity": 159,
-          "missing_close_date": 295,
-          "missing_owner": 154,
-          "recent_meeting_activity_14d": 9,
-          "stale_open_deals_gt_30d": 105,
-          "open_deals_missing_next_step": 150,
-          "open_deals_missing_next_activity": 159,
-          "deals_missing_close_date": 295,
-          "deals_missing_owner": 154
-        },
-        "current": {
           "open_deal_count": 162,
           "open_missing_next_step": 148,
           "stale_open_deals_30d": 106,
           "open_missing_next_activity": 158,
           "missing_close_date": 295,
           "missing_owner": 154,
-          "recent_meeting_activity_14d": 10,
-          "stale_open_deals_gt_30d": 106,
-          "open_deals_missing_next_step": 148,
-          "open_deals_missing_next_activity": 158,
-          "deals_missing_close_date": 295,
-          "deals_missing_owner": 154
-        }
+          "recent_meeting_activity_14d": 10
+        },
+        "current": {
+          "open_deal_count": 142,
+          "open_missing_next_step": 128,
+          "stale_open_deals_30d": 101,
+          "open_missing_next_activity": 131,
+          "missing_close_date": 295,
+          "missing_owner": 154,
+          "recent_meeting_activity_14d": 10
+        },
+        "note": "Hygiene improved across next-step (-20), next-activity (-27), stale (-5); open count -20 (see overnight-drop contradiction). recent_meeting_activity_14d carried (blocked property). missing_close_date and missing_owner untouched — cleanup has not reached them."
       },
       {
         "field": "behavior_signals",
-        "previous": {
-          "gong_calls_7d": 60,
-          "gong_calls_14d": 125,
-          "most_recent_gong_call_days_ago": 0,
-          "gong_next_step_call_rate": 0.256,
-          "ai_wedge_call_rate": 0.288,
-          "standup_coverage_tue_fri": 1.0,
-          "meeting_to_action_quality": 0.63,
-          "owner_date_discipline": 0.391
-        },
-        "current": {
-          "gong_calls_7d": 68,
-          "gong_calls_14d": 129,
-          "most_recent_gong_call_days_ago": 0,
-          "gong_next_step_call_rate": 0.264,
-          "ai_wedge_call_rate": 0.287,
-          "standup_coverage_tue_fri": 1.0,
-          "meeting_to_action_quality": 0.614,
-          "owner_date_discipline": 0.364
-        }
+        "previous": "carried",
+        "current": "carried",
+        "note": "No change recorded — Gong/Granola connector unavailable in this environment; values are the 2026-06-10 sheet refresh, not a real day diff"
       }
     ]
   },
   "weekly_diff": {
     "baseline": false,
-    "changes": []
-  }
+    "compared_against": "2026-06-07T20:51:21.889293+00:00 snapshot (git b6ca894) — closest available baseline to last Friday 2026-06-05; no Friday snapshot exists in history",
+    "changes": [
+      {
+        "field": "crm_forecast",
+        "previous": 1870600,
+        "current": 1992000,
+        "note": "+$121,400 since the Jun 7 baseline (the operating brief's reference numbers)"
+      },
+      {
+        "field": "capacity_model",
+        "previous": 6966378,
+        "current": 6580214,
+        "note": "-$386,164 — sheet model assumptions were revised between Jun 7 and Jun 10 (capacity is recovery potential, not attainment)"
+      },
+      {
+        "field": "capacity_not_backed_by_crm",
+        "previous": 5095778,
+        "current": 4588214,
+        "note": "-$507,564 — capacity revised down and CRM forecast up"
+      },
+      {
+        "field": "gap_to_target",
+        "previous": -8129400,
+        "current": -8008000,
+        "note": "Improved $121,400 since Jun 7"
+      },
+      {
+        "field": "open_pipeline",
+        "previous": 4239000,
+        "current": 3412000,
+        "note": "-$827,000 since Jun 7"
+      },
+      {
+        "field": "weighted_pipeline",
+        "previous": 1469000,
+        "current": 1590400,
+        "note": "+$121,400 since Jun 7"
+      },
+      {
+        "field": "actual_revenue",
+        "previous": 401600,
+        "current": 401600,
+        "note": "No closed-won revenue added since Jun 7 ($15K close last week landed Jun 1-7, already in baseline)"
+      },
+      {
+        "field": "risk_counts.open_missing_next_step",
+        "previous": 149,
+        "current": 128,
+        "note": "-21 since Jun 7 — recovery action is progressing but incomplete and overdue (due 2026-06-08)"
+      },
+      {
+        "field": "risk_counts.stale_open_deals_30d",
+        "previous": 116,
+        "current": 101,
+        "note": "-15 since Jun 7"
+      },
+      {
+        "field": "weekly_summary.revenue_booked",
+        "previous": {
+          "this_week": 0,
+          "prior_week": 0
+        },
+        "current": {
+          "this_week": 0,
+          "prior_week": 15000
+        },
+        "note": "Correction, not new revenue: CRM shows a $15,000 closed-won deal in week of Jun 1-7 that the Actuals-Log-sourced weekly summary missed"
+      }
+    ]
+  },
+  "provenance_note": "Daily diff is a real day-over-day comparison against the 2026-06-10 published snapshot. Weekly diff uses the 2026-06-07 snapshot as baseline because no Friday 2026-06-05 snapshot exists; values marked 'carried' are not real diffs."
 }

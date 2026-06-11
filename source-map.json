@@ -1,9 +1,41 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-10T13:32:12.840461+00:00",
+  "generated_at_utc": "2026-06-11T00:40:14.311807+00:00",
   "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
-  "path_written": "/home/alfredclaw/sales-pace-command-center/data",
+  "path_written": "ericosiu/sales-pace-command-center-data (repo root)",
   "requested_path_available": false,
+  "canonical_rules": {
+    "operating_target": "$10M is the operating target; $20M is upside scoreboard, not daily execution status.",
+    "forecast": "CRM (HubSpot) forecast is canonical for Monday standup. Live HubSpot read supersedes the sheet's HubSpot Daily Snapshot when newer.",
+    "capacity_model": "Top-down capacity model is recovery potential until backed by weighted CRM pipeline.",
+    "closed_won_period": "Q2+Q3 2026 (closedate 2026-04-01 to 2026-09-30) — verified: live CRM returns exactly $401,600 / 4 deals for this window."
+  },
+  "live_connectors": [
+    {
+      "name": "HubSpot MCP (read-only aggregate SQL)",
+      "status": "LIVE",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "note": "Aggregates only; no raw deal records, names, or PII pulled into this layer."
+    },
+    {
+      "name": "Google Sheet 1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o (operating workbook)",
+      "status": "LIVE READ / STALE CONTENT",
+      "refreshed_at_utc": "2026-06-10T13:31:59Z",
+      "note": "Sheet read live at 2026-06-11T00:36Z, but its internal HubSpot/Gong/Granola snapshot blocks were last refreshed 2026-06-10T13:30-13:32Z."
+    },
+    {
+      "name": "Gong API",
+      "status": "BLOCKED — no connector in this environment",
+      "refreshed_at_utc": null,
+      "note": "Gong values carried from sheet's Gong + Granola Insights tab (2026-06-10T13:31:56Z)."
+    },
+    {
+      "name": "Granola API",
+      "status": "BLOCKED — no connector in this environment",
+      "refreshed_at_utc": null,
+      "note": "Granola values carried from sheet's Gong + Granola Insights tab (2026-06-10T13:31:56Z)."
+    }
+  ],
   "tabs_read": [
     "Dashboard",
     "Daily Standup",
@@ -18,323 +50,267 @@
   "metrics": [
     {
       "metric": "daily.status",
-      "source_tab": "Daily Standup",
-      "upstream": "Dashboard / HubSpot forecast vs $10M",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Daily Standup answer block and Today snapshot: On track / off track? / 10M status."
+      "source_tab": "Derived",
+      "upstream": "Live HubSpot forecast vs $10M target pace",
+      "source_type": "live-connector-derived",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "Forecast $1,992,000 vs target-to-date $3,846,154 and target $10M — OFF TRACK."
     },
     {
       "metric": "daily.upside_status",
-      "source_tab": "Daily Standup",
+      "source_tab": "Dashboard",
       "upstream": "$20M upside scoreboard",
       "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Today snapshot: 20M upside status."
+      "refreshed_at_utc": "2026-06-10T13:31:59Z",
+      "evidence_note": "Upside gap = $20M - forecast; scoreboard only, not daily execution status."
     },
     {
       "metric": "daily.trend",
-      "source_tab": "Daily Standup",
-      "upstream": "Weekly activity direction",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Daily Standup answer block: Trend better / worse?."
+      "source_tab": "Derived",
+      "upstream": "Live HubSpot day-over-day and week-over-week deltas",
+      "source_type": "live-connector-derived",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "Weighted pipeline +$134,500 vs 06-10 sheet snapshot; $270K new pipeline created Jun 10-11; 0 closes this week vs $15K prior week."
     },
     {
       "metric": "daily.target",
       "source_tab": "Dashboard",
       "upstream": "Assumptions / operating target",
       "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
+      "refreshed_at_utc": "2026-06-10T13:31:59Z",
       "evidence_note": "Dashboard operating target card: $10M operating target."
     },
     {
       "metric": "daily.target_to_date",
-      "source_tab": "Daily Standup",
+      "source_tab": "Trend Data",
       "upstream": "Trend Data target pace",
       "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Today snapshot: Target-to-date."
+      "refreshed_at_utc": "2026-06-10T13:30:42.150688+00:00",
+      "evidence_note": "STALE by 1 day — pace formula lives in the sheet; carried from 06-10 value $3,846,154."
     },
     {
       "metric": "daily.actual_revenue",
-      "source_tab": "HubSpot Daily Snapshot",
+      "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
-      "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-10T13:30:42.150688+00:00",
-      "evidence_note": "Closed-won revenue (period)."
+      "source_type": "live-connector",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "SUM(amount_in_home_currency) WHERE hs_is_closed_won AND closedate in 2026-04-01..2026-09-30 = $401,600 (4 deals). Matches sheet and brief — VERIFIED."
     },
     {
       "metric": "daily.crm_forecast",
-      "source_tab": "HubSpot Daily Snapshot",
+      "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
-      "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-10T13:30:42.150688+00:00",
-      "evidence_note": "Forecast: closed-won + weighted open."
+      "source_type": "live-connector",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "Closed-won $401,600 + weighted open pipeline $1,590,400 = $1,992,000. Supersedes sheet snapshot $1,857,500 (06-10) and brief baseline $1,870,600 (06-07)."
     },
     {
       "metric": "daily.capacity_model",
       "source_tab": "Dashboard",
-      "upstream": "Top-down capacity model",
+      "upstream": "Top-down capacity model (Sales Projection Model assumptions)",
       "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Forecast reconciliation bridge: Top-down capacity model."
+      "refreshed_at_utc": "2026-06-10T13:31:59Z",
+      "evidence_note": "$6,580,214 per sheet (model assumptions last refreshed 06-10 13:31:59). Brief's $6,966,378 is the 06-07 baseline — SUPERSEDED. Recovery potential only until backed by CRM."
     },
     {
       "metric": "daily.capacity_not_backed_by_crm",
-      "source_tab": "Dashboard",
-      "upstream": "Dashboard reconciliation",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Capacity not yet backed by CRM."
+      "source_tab": "Derived",
+      "upstream": "capacity_model - crm_forecast",
+      "source_type": "derived",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "$6,580,214 (sheet 06-10) - $1,992,000 (live CRM 06-11) = $4,588,214. Mixed-freshness derivation — capacity side is 11h older."
     },
     {
       "metric": "daily.gap_to_target",
-      "source_tab": "Daily Standup",
-      "upstream": "Forecast vs $10M target",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Today snapshot: Gap to $10M."
+      "source_tab": "Derived",
+      "upstream": "crm_forecast - $10M target",
+      "source_type": "live-connector-derived",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "$1,992,000 - $10,000,000 = -$8,008,000."
     },
     {
       "metric": "daily.open_pipeline",
-      "source_tab": "HubSpot Daily Snapshot",
+      "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
-      "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-10T13:30:42.150688+00:00",
-      "evidence_note": "Open pipeline."
+      "source_type": "live-connector",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "SUM(amount_in_home_currency) WHERE hs_is_closed = false = $3,412,000 across 142 open deals. See contradictions[1] for the $804K overnight drop."
     },
     {
       "metric": "daily.weighted_pipeline",
-      "source_tab": "HubSpot Daily Snapshot",
+      "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
-      "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-10T13:30:42.150688+00:00",
-      "evidence_note": "Weighted open pipeline."
+      "source_type": "live-connector",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "SUM(hs_projected_amount) WHERE hs_is_closed = false = $1,590,400."
     },
     {
       "metric": "daily.biggest_gap",
       "source_tab": "Actions Log",
       "upstream": "Actions Log",
       "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "First open gap metric surfaced by Daily Standup/Dashboard."
+      "refreshed_at_utc": "2026-06-10T13:31:59Z",
+      "evidence_note": "First open gap metric: CRM Hygiene. Still supported by live risk counts (128 no-next-step)."
     },
     {
       "metric": "daily.recovery_action",
       "source_tab": "Actions Log",
-      "upstream": "Actions Log",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "First open recovery action surfaced by Daily Standup/Dashboard."
+      "upstream": "Actions Log, counts updated from live HubSpot",
+      "source_type": "sheet-derived + live counts",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "Action text from Actions Log; deal counts refreshed to live values (128 no-next-step, 101 stale)."
     },
     {
       "metric": "daily.owner",
       "source_tab": "Actions Log",
       "upstream": "Actions Log",
       "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Owner for first open recovery action."
+      "refreshed_at_utc": "2026-06-10T13:31:59Z",
+      "evidence_note": "Owner for first open recovery action: Eric Siu."
     },
     {
       "metric": "daily.due_date",
       "source_tab": "Actions Log",
       "upstream": "Actions Log",
       "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Due date for first open recovery action."
+      "refreshed_at_utc": "2026-06-10T13:31:59Z",
+      "evidence_note": "Due 2026-06-08 — OVERDUE by 3 days as of this snapshot; action remains open in Actions Log."
     },
     {
       "metric": "daily.required_activity_today",
-      "source_tab": "Daily Standup",
-      "upstream": "Deal Risk Signals",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": "2026-06-10T13:31:57Z",
-      "evidence_note": "Today snapshot required activity today."
+      "source_tab": "Derived",
+      "upstream": "Live HubSpot risk counts",
+      "source_type": "live-connector-derived",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "Built from live counts: 128 no-next-step, 101 stale, 131 missing next activity."
     },
     {
       "metric": "daily.actual_activity_yesterday_today",
-      "source_tab": "Daily Standup",
-      "upstream": "HubSpot Daily Snapshot",
-      "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-10T13:30:42.150688+00:00",
-      "evidence_note": "Today snapshot actual activity yesterday/today."
+      "source_tab": "HubSpot Live (MCP)",
+      "upstream": "HubSpot CRM",
+      "source_type": "live-connector",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "Deals created 2026-06-10..06-11: 4 deals / $270,000 new pipeline; 23 deals modified in same window."
     },
     {
       "metric": "daily.risk_counts.open_deal_count",
-      "source_tab": "Deal Risk Signals",
-      "upstream": "HubSpot Daily Snapshot/local artifact",
-      "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-10T13:31:57Z",
-      "evidence_note": "Open deal count."
+      "source_tab": "HubSpot Live (MCP)",
+      "upstream": "HubSpot CRM",
+      "source_type": "live-connector",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "COUNT(*) WHERE hs_is_closed = false = 142."
     },
     {
       "metric": "daily.risk_counts.stale_open_deals_gt_30d",
-      "source_tab": "Deal Risk Signals",
-      "upstream": "HubSpot",
-      "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-10T13:31:57Z",
-      "evidence_note": "Stale open deals >30d."
+      "source_tab": "HubSpot Live (MCP)",
+      "upstream": "HubSpot CRM",
+      "source_type": "live-connector",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "COUNT(*) open AND notes_last_updated < 2026-05-12 = 101."
     },
     {
       "metric": "daily.risk_counts.open_deals_missing_next_step",
-      "source_tab": "Deal Risk Signals",
-      "upstream": "HubSpot",
-      "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-10T13:31:57Z",
-      "evidence_note": "Open deals missing next step."
+      "source_tab": "HubSpot Live (MCP)",
+      "upstream": "HubSpot CRM",
+      "source_type": "live-connector",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "COUNT(*) open AND hs_next_step IS NULL = 128."
     },
     {
       "metric": "daily.risk_counts.open_deals_missing_next_activity",
-      "source_tab": "Deal Risk Signals",
-      "upstream": "HubSpot",
-      "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-10T13:31:57Z",
-      "evidence_note": "Open deals missing next activity."
+      "source_tab": "HubSpot Live (MCP)",
+      "upstream": "HubSpot CRM",
+      "source_type": "live-connector",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "COUNT(*) open AND notes_next_activity_date IS NULL = 131."
     },
     {
       "metric": "daily.risk_counts.deals_missing_close_date",
-      "source_tab": "Deal Risk Signals",
-      "upstream": "HubSpot local artifact",
-      "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-10T13:31:57Z",
-      "evidence_note": "Deals missing close date."
+      "source_tab": "HubSpot Live (MCP)",
+      "upstream": "HubSpot CRM",
+      "source_type": "live-connector",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "COUNT(*) WHERE closedate IS NULL = 295 (all deals, unchanged)."
     },
     {
       "metric": "daily.risk_counts.deals_missing_owner",
+      "source_tab": "HubSpot Live (MCP)",
+      "upstream": "HubSpot CRM",
+      "source_type": "live-connector",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "COUNT(*) WHERE hubspot_owner_id IS NULL = 154 (all deals, unchanged)."
+    },
+    {
+      "metric": "daily.risk_counts.recent_meeting_activity_14d",
       "source_tab": "Deal Risk Signals",
-      "upstream": "HubSpot local artifact",
-      "source_type": "connector-derived",
+      "upstream": "HubSpot (hidden property)",
+      "source_type": "sheet-derived",
       "refreshed_at_utc": "2026-06-10T13:31:57Z",
-      "evidence_note": "Deals missing owner."
+      "evidence_note": "BLOCKED — hs_latest_meeting_activity is hidden in this portal; value 10 carried from 06-10 sheet, unverifiable live."
     },
     {
-      "metric": "daily.behavior_signals.gong_calls_7d",
+      "metric": "daily.behavior_signals.*",
       "source_tab": "Gong + Granola Insights",
-      "upstream": "Gong API",
-      "source_type": "connector-derived",
+      "upstream": "Gong API / Granola API",
+      "source_type": "connector-derived (carried)",
       "refreshed_at_utc": "2026-06-10T13:31:56Z",
-      "evidence_note": "Gong calls last 7d."
-    },
-    {
-      "metric": "daily.behavior_signals.gong_calls_14d",
-      "source_tab": "Gong + Granola Insights",
-      "upstream": "Gong API",
-      "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-10T13:31:56Z",
-      "evidence_note": "Gong calls last 14d."
-    },
-    {
-      "metric": "daily.behavior_signals.gong_next_step_call_rate",
-      "source_tab": "Gong + Granola Insights",
-      "upstream": "Gong detail text scan",
-      "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-10T13:31:56Z",
-      "evidence_note": "Next-step language on calls."
-    },
-    {
-      "metric": "daily.behavior_signals.meeting_to_action_quality",
-      "source_tab": "Gong + Granola Insights",
-      "upstream": "Granola API",
-      "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-10T13:31:56Z",
-      "evidence_note": "Meeting-to-action quality."
-    },
-    {
-      "metric": "daily.behavior_signals.owner_date_discipline",
-      "source_tab": "Gong + Granola Insights",
-      "upstream": "Granola API",
-      "source_type": "connector-derived",
-      "refreshed_at_utc": "2026-06-10T13:31:56Z",
-      "evidence_note": "Owner/date discipline."
+      "evidence_note": "STALE ~11h — no Gong/Granola connector in this environment; all behavior signals carried from the 06-10 sheet refresh."
     },
     {
       "metric": "weekly.status",
-      "source_tab": "Weekly Standup",
-      "upstream": "Dashboard $10M status",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Weekly question: On track / off track?."
+      "source_tab": "Derived",
+      "upstream": "Live HubSpot forecast vs $10M",
+      "source_type": "live-connector-derived",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "OFF TRACK — forecast $1,992,000 vs $10M."
     },
     {
       "metric": "weekly.trend",
-      "source_tab": "Weekly Standup",
-      "upstream": "Weekly activity vs prior week",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Weekly question: Trend better / worse?."
-    },
-    {
-      "metric": "weekly.biggest_weekly_miss",
-      "source_tab": "Weekly Standup",
-      "upstream": "Actions Log first open gap",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Biggest weekly miss."
-    },
-    {
-      "metric": "weekly.recovery_action",
-      "source_tab": "Weekly Standup",
-      "upstream": "Actions Log first open action",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Recovery action."
-    },
-    {
-      "metric": "weekly.owner",
-      "source_tab": "Weekly Standup",
-      "upstream": "Actions Log owner",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Owner."
-    },
-    {
-      "metric": "weekly.due_date",
-      "source_tab": "Weekly Standup",
-      "upstream": "Actions Log due date",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Due date."
+      "source_tab": "Derived",
+      "upstream": "Live HubSpot closed-won week-over-week",
+      "source_type": "live-connector-derived",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "0 closes / $0 this week (Jun 8-14, in progress) vs 1 close / $15,000 prior week — Worse."
     },
     {
       "metric": "weekly.weekly_summary.closed_won_deals",
-      "source_tab": "Weekly Standup",
-      "upstream": "Weekly activity summary",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "This Week Summary: Closed won deals."
-    },
-    {
-      "metric": "weekly.weekly_summary.completed_discoveries",
-      "source_tab": "Weekly Standup",
-      "upstream": "Weekly activity summary",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "This Week Summary: Completed discoveries."
-    },
-    {
-      "metric": "weekly.weekly_summary.proposals_sent",
-      "source_tab": "Weekly Standup",
-      "upstream": "Weekly activity summary",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "This Week Summary: Proposals sent."
+      "source_tab": "HubSpot Live (MCP)",
+      "upstream": "HubSpot CRM",
+      "source_type": "live-connector",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "COUNT closed-won by closedate week: this week 0, prior week 1. Supersedes empty Actuals Log."
     },
     {
       "metric": "weekly.weekly_summary.revenue_booked",
-      "source_tab": "Weekly Standup",
-      "upstream": "Weekly activity summary",
+      "source_tab": "HubSpot Live (MCP)",
+      "upstream": "HubSpot CRM",
+      "source_type": "live-connector",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00",
+      "evidence_note": "SUM closed-won amount by closedate week: this week $0, prior week $15,000. CONTRADICTS Actuals Log ($0) — CRM canonical."
+    },
+    {
+      "metric": "weekly.weekly_summary.completed_discoveries",
+      "source_tab": "Weekly Standup / Actuals Log",
+      "upstream": "Sheet Actuals Log (empty)",
       "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "This Week Summary: Revenue booked."
+      "refreshed_at_utc": "2026-06-10T13:31:59Z",
+      "evidence_note": "UNVERIFIED — Actuals Log contains only placeholder rows; no approved CRM stage mapping for discoveries."
+    },
+    {
+      "metric": "weekly.weekly_summary.proposals_sent",
+      "source_tab": "Weekly Standup / Actuals Log",
+      "upstream": "Sheet Actuals Log (empty)",
+      "source_type": "sheet-derived",
+      "refreshed_at_utc": "2026-06-10T13:31:59Z",
+      "evidence_note": "UNVERIFIED — Actuals Log contains only placeholder rows; no approved CRM stage mapping for proposals."
     },
     {
       "metric": "paid_content.base_paid_budget",
       "source_tab": "Paid + Content Math",
       "upstream": "Assumptions",
       "source_type": "sheet-derived",
-      "refreshed_at_utc": null,
-      "evidence_note": "Base paid monthly budget after quality proven."
+      "refreshed_at_utc": "2026-06-10T13:31:59Z",
+      "evidence_note": "Base paid monthly budget after quality proven: $55,000."
     },
     {
       "metric": "trend.forecast_line",
@@ -342,13 +318,32 @@
       "upstream": "HubSpot Daily Snapshot and target pace",
       "source_type": "sheet-derived",
       "refreshed_at_utc": "2026-06-10T13:30:42.150688+00:00",
-      "evidence_note": "Trend Data operating lines for charts."
+      "evidence_note": "STALE — Trend Data operating lines last fed by the 06-10 snapshot; will lag today's live forecast until the sheet's weekday refresh runs."
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "brief-baseline-superseded",
+      "severity": "info",
+      "detail": "Operating brief figures (CRM forecast $1,870,600; capacity $6,966,378; capacity-not-backed $5,095,778; gap -$8,129,400) exactly match the 2026-06-07 snapshot (git b6ca894) — the brief is a 4-day-old baseline, superseded by live CRM ($1,992,000 forecast) and the 06-10 sheet capacity model ($6,580,214)."
+    },
+    {
+      "id": "open-pipeline-overnight-drop",
+      "severity": "needs-verification",
+      "detail": "Open pipeline fell $4,216,000 (06-10 sheet) to $3,412,000 (06-11 live, -$804K) and open deal count 162 to 142 (-20), but only 4 closed-lost deals ($38K) are recorded this week. Remainder is likely deal amount edits, archived/deleted deals, or a definition mismatch between the sheet snapshot script and hs_is_closed=false. Verify at next sheet weekday refresh."
+    },
+    {
+      "id": "actuals-log-vs-crm",
+      "severity": "process-gap",
+      "detail": "Sheet Actuals Log shows $0 revenue booked for week of Jun 1-7; live CRM shows one $15,000 closed-won deal. The Actuals Log is not being filled in — CRM is canonical; weekly.json now uses CRM values for closes and revenue."
     }
   ],
   "staleness_notes": [
-    "HubSpot Daily Snapshot refreshed_at_utc=2026-06-10T13:30:42.150688+00:00",
-    "Deal Risk Signals refreshed_at_utc=2026-06-10T13:31:57Z",
-    "Gong + Granola Insights refreshed_at_utc=2026-06-10T13:31:56Z",
-    "Dashboard, Daily Standup, Weekly Standup, Actions Log, Paid + Content Math, and Trend Data do not display explicit refreshed_at_utc values."
+    "HubSpot live MCP aggregates refreshed_at_utc=2026-06-11T00:40:14Z (canonical).",
+    "Sheet HubSpot Daily Snapshot refreshed_at_utc=2026-06-10T13:30:42Z — superseded by live read.",
+    "Deal Risk Signals (sheet) refreshed_at_utc=2026-06-10T13:31:57Z — superseded by live counts except recent_meeting_activity_14d (blocked).",
+    "Gong + Granola Insights refreshed_at_utc=2026-06-10T13:31:56Z — STALE, no connector available in this environment.",
+    "Trend Data / target_to_date refreshed_at_utc=2026-06-10T13:30:42Z — STALE by 1 day.",
+    "Dashboard, Daily Standup, Weekly Standup, Actions Log, Paid + Content Math last model refresh 2026-06-10T13:31:59Z."
   ]
 }

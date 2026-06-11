@@ -1,38 +1,38 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-10T13:32:12.840461+00:00",
+  "generated_at_utc": "2026-06-11T00:40:14.311807+00:00",
   "period": "daily",
   "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
   "status": "OFF TRACK",
   "upside_status": "UPSIDE GAP",
-  "trend": "No activity / no movement",
+  "trend": "Mixed: weighted pipeline up $134.5K and $270K new pipeline created, but zero closes this week vs $15K last week",
   "target": 10000000,
   "target_to_date": 3846154,
   "actual_revenue": 401600,
-  "crm_forecast": 1857500,
+  "crm_forecast": 1992000,
   "capacity_model": 6580214,
-  "capacity_not_backed_by_crm": 4722714,
-  "gap_to_target": -8142500,
-  "open_pipeline": 4216000,
-  "weighted_pipeline": 1455900,
+  "capacity_not_backed_by_crm": 4588214,
+  "gap_to_target": -8008000,
+  "open_pipeline": 3412000,
+  "weighted_pipeline": 1590400,
   "biggest_gap": "CRM Hygiene",
-  "recovery_action": "Assign owner for 149 no-next-step deals and 116 stale open deals; daily standup starts from Deal Risk Signals until cleanup is owned.",
+  "recovery_action": "Assign owner for 128 no-next-step deals and 101 stale open deals; daily standup starts from Deal Risk Signals until cleanup is owned.",
   "owner": "Eric Siu",
   "due_date": "2026-06-08",
-  "operating_implication": "Run recovery action today",
-  "required_activity_today": "Clean 148 no-next-step deals; recover 106 stale deals; book next activity for 158 deals",
-  "actual_activity_yesterday_today": "15000 new pipeline / 51 modified",
+  "operating_implication": "Run recovery action today (action overdue since 2026-06-08)",
+  "required_activity_today": "Clean 128 no-next-step deals; recover 101 stale deals; book next activity for 131 deals",
+  "actual_activity_yesterday_today": "270000 new pipeline / 23 modified",
   "risk_counts": {
-    "open_deal_count": 162,
-    "open_missing_next_step": 148,
-    "stale_open_deals_30d": 106,
-    "open_missing_next_activity": 158,
+    "open_deal_count": 142,
+    "open_missing_next_step": 128,
+    "stale_open_deals_30d": 101,
+    "open_missing_next_activity": 131,
     "missing_close_date": 295,
     "missing_owner": 154,
     "recent_meeting_activity_14d": 10,
-    "stale_open_deals_gt_30d": 106,
-    "open_deals_missing_next_step": 148,
-    "open_deals_missing_next_activity": 158,
+    "stale_open_deals_gt_30d": 101,
+    "open_deals_missing_next_step": 128,
+    "open_deals_missing_next_activity": 131,
     "deals_missing_close_date": 295,
     "deals_missing_owner": 154
   },
@@ -46,14 +46,29 @@
     "meeting_to_action_quality": 0.614,
     "owner_date_discipline": 0.364
   },
+  "data_quality_flags": [
+    "crm_forecast, actual_revenue, open_pipeline, weighted_pipeline, and risk_counts verified live against HubSpot CRM (read-only MCP) at 2026-06-11T00:40Z; HubSpot is canonical and supersedes the sheet snapshot from 2026-06-10T13:30Z.",
+    "behavior_signals (Gong + Granola) carried from sheet refresh 2026-06-10T13:31Z; no Gong/Granola connector in this environment — STALE ~11h.",
+    "risk_counts.recent_meeting_activity_14d carried from 2026-06-10 sheet; HubSpot property hs_latest_meeting_activity is hidden in this portal — BLOCKED, unverifiable.",
+    "target_to_date carried from sheet Trend Data (2026-06-10); pace formula lives in the sheet — STALE by 1 day.",
+    "capacity_model is the sheet's top-down model ($6,580,214, refreshed 2026-06-10). The $6,966,378 figure in the operating brief is the 2026-06-07 baseline and is superseded.",
+    "Open pipeline dropped $804K and open deal count dropped 162 to 142 since the 2026-06-10 sheet snapshot, but only 4 closed-lost deals ($38K) are recorded this week — remainder likely amount edits, archived deals, or a definition mismatch in the sheet snapshot script. CONTRADICTORY, verify at next sheet refresh."
+  ],
   "sources": [
     {
+      "tab": "HubSpot Live (MCP read-only aggregate queries)",
+      "range": "DEAL aggregates",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00"
+    },
+    {
       "tab": "Dashboard",
-      "range": "A1:Z200"
+      "range": "A1:Z200",
+      "refreshed_at_utc": "2026-06-10T13:31:59Z"
     },
     {
       "tab": "Daily Standup",
-      "range": "A1:Z200"
+      "range": "A1:Z200",
+      "refreshed_at_utc": "2026-06-10T13:31:59Z"
     },
     {
       "tab": "HubSpot Daily Snapshot",
@@ -72,11 +87,13 @@
     },
     {
       "tab": "Actions Log",
-      "range": "A1:Z200"
+      "range": "A1:Z200",
+      "refreshed_at_utc": "2026-06-10T13:31:59Z"
     },
     {
       "tab": "Trend Data",
-      "range": "A1:Z200"
+      "range": "A1:Z200",
+      "refreshed_at_utc": "2026-06-10T13:30:42.150688+00:00"
     }
   ]
 }

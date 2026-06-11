@@ -1,57 +1,74 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-10T13:32:12.840461+00:00",
+  "generated_at_utc": "2026-06-11T00:40:14.311807+00:00",
   "period": "weekly",
   "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
   "status": "OFF TRACK",
-  "trend": "No activity / no movement",
+  "trend": "Worse: zero closes and zero revenue booked this week vs one $15,000 close last week",
   "biggest_weekly_miss": "CRM Hygiene",
-  "recovery_action": "Assign owner for 149 no-next-step deals and 116 stale open deals; daily standup starts from Deal Risk Signals until cleanup is owned.",
+  "recovery_action": "Assign owner for 128 no-next-step deals and 101 stale open deals; daily standup starts from Deal Risk Signals until cleanup is owned.",
   "owner": "Eric Siu",
   "due_date": "2026-06-08",
   "rule": "Zero vs zero is No activity / no movement, not Better/stable.",
   "weekly_summary": {
     "closed_won_deals": {
       "this_week": 0,
-      "prior_week": 0,
-      "delta": 0,
-      "direction": "No activity / no movement",
-      "operating_implication": "No closes in either week; inspect late-stage coverage"
+      "prior_week": 1,
+      "delta": -1,
+      "direction": "Worse",
+      "operating_implication": "One close last week (prior week per CRM), none so far this week; inspect late-stage coverage",
+      "source": "HubSpot live (CRM canonical); supersedes Actuals Log zeros"
     },
     "completed_discoveries": {
       "this_week": 0,
       "prior_week": 0,
       "delta": 0,
       "direction": "No activity / no movement",
-      "operating_implication": "No discovery activity; inspect demand gen / outbound"
+      "operating_implication": "No discovery activity logged; inspect demand gen / outbound",
+      "source": "Sheet Actuals Log only (empty) — UNVERIFIED, no CRM stage mapping confirmed"
     },
     "proposals_sent": {
       "this_week": 0,
       "prior_week": 0,
       "delta": 0,
       "direction": "No activity / no movement",
-      "operating_implication": "No proposals; inspect SQL\u2192proposal conversion"
+      "operating_implication": "No proposals logged; inspect SQL→proposal conversion",
+      "source": "Sheet Actuals Log only (empty) — UNVERIFIED, no CRM stage mapping confirmed"
     },
     "revenue_booked": {
       "this_week": 0,
-      "prior_week": 0,
-      "delta": 0,
-      "direction": "No activity / no movement",
-      "operating_implication": "No booked revenue in either week; do not call stable good"
+      "prior_week": 15000,
+      "delta": -15000,
+      "direction": "Worse",
+      "operating_implication": "Prior week booked $15,000 (closed-won per CRM, 2026-06-01 to 06-07); this week zero so far",
+      "source": "HubSpot live (CRM canonical); contradicts Actuals Log which shows $0 — Actuals Log is not being filled in"
     }
   },
+  "data_quality_flags": [
+    "closed_won_deals and revenue_booked verified live against HubSpot (read-only) at 2026-06-11T00:40Z. CRM shows a $15,000 closed-won deal in the prior week (Jun 1-7) that the sheet's Actuals Log does not record — CRM is canonical per Monday-standup rule.",
+    "completed_discoveries and proposals_sent come only from the sheet Actuals Log, which is empty placeholder data — UNVERIFIED until the log is filled or a CRM stage mapping is approved.",
+    "This week is Mon 2026-06-08 through Sun 2026-06-14; snapshot taken Thu 2026-06-11 00:40 UTC (week in progress)."
+  ],
   "sources": [
     {
+      "tab": "HubSpot Live (MCP read-only aggregate queries)",
+      "range": "DEAL aggregates by closedate week",
+      "refreshed_at_utc": "2026-06-11T00:40:14.311807+00:00"
+    },
+    {
       "tab": "Weekly Standup",
-      "range": "A1:Z200"
+      "range": "A1:Z200",
+      "refreshed_at_utc": "2026-06-10T13:31:59Z"
     },
     {
       "tab": "Dashboard",
-      "range": "A1:Z200"
+      "range": "A1:Z200",
+      "refreshed_at_utc": "2026-06-10T13:31:59Z"
     },
     {
       "tab": "Actions Log",
-      "range": "A1:Z200"
+      "range": "A1:Z200",
+      "refreshed_at_utc": "2026-06-10T13:31:59Z"
     }
   ]
 }
