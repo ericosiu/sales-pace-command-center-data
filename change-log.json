@@ -1,78 +1,130 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-11T13:59:21.382531+00:00",
+  "generated_at_utc": "2026-06-12T00:20:41.398654+00:00",
   "baseline": false,
   "daily_diff": {
     "baseline": false,
+    "compared_against": "2026-06-11T13:59:21.382531+00:00 snapshot (git c35101f) — yesterday's automated sheet-based refresh",
     "changes": [
       {
         "field": "crm_forecast",
-        "previous": 1857500,
-        "current": 1992000
+        "previous": 1992000,
+        "current": 2145500,
+        "note": "+$153,500 — weighted pipeline grew on existing Enterprise deal amounts (+$300K open value); independently confirms the 13:59 snapshot, which matched the live CRM read exactly"
       },
       {
         "field": "gap_to_target",
-        "previous": -8142500,
-        "current": -8008000
+        "previous": -8008000,
+        "current": -7854500,
+        "note": "Improved $153,500; still OFF TRACK"
+      },
+      {
+        "field": "open_pipeline",
+        "previous": 4486000,
+        "current": 3712000,
+        "note": "DEFINITION CORRECTION, not movement: now CRM-canonical (hs_is_closed=false). The sheet script's open universe runs 24 deals/$774K larger while weighted pipeline matches CRM to the dollar — the Jun 10-11 '$804K drop' contradiction is hereby RESOLVED as this same mismatch."
+      },
+      {
+        "field": "weighted_pipeline",
+        "previous": 1590400,
+        "current": 1743900,
+        "note": "+$153,500 — real movement, Enterprise deal amounts grew during Jun 11"
+      },
+      {
+        "field": "capacity_not_backed_by_crm",
+        "previous": 4588214,
+        "current": 4434714,
+        "note": "Recomputed: capacity model unchanged, CRM forecast up. Capacity model itself flagged stale: computed at $100K ACV vs canonical $180K."
+      },
+      {
+        "field": "actual_revenue",
+        "previous": 401600,
+        "current": 401600,
+        "note": "No change — zero closes; verified live"
+      },
+      {
+        "field": "actual_activity_yesterday_today",
+        "previous": "270000 new pipeline / 23 modified",
+        "current": "0 new pipeline / 19 modified",
+        "note": "Zero net-new deals created Jun 11 — pipeline-creation gap flagged in required_activity_today"
       },
       {
         "field": "risk_counts",
         "previous": {
-          "open_deal_count": 162,
-          "open_missing_next_step": 148,
-          "stale_open_deals_30d": 106,
-          "open_missing_next_activity": 158,
-          "missing_close_date": 295,
-          "missing_owner": 154,
-          "recent_meeting_activity_14d": 10,
-          "stale_open_deals_gt_30d": 106,
-          "open_deals_missing_next_step": 148,
-          "open_deals_missing_next_activity": 158,
-          "deals_missing_close_date": 295,
-          "deals_missing_owner": 154
-        },
-        "current": {
           "open_deal_count": 166,
           "open_missing_next_step": 152,
           "stale_open_deals_30d": 106,
-          "open_missing_next_activity": 155,
-          "missing_close_date": 295,
-          "missing_owner": 154,
-          "recent_meeting_activity_14d": 10,
-          "stale_open_deals_gt_30d": 106,
-          "open_deals_missing_next_step": 152,
-          "open_deals_missing_next_activity": 155,
-          "deals_missing_close_date": 295,
-          "deals_missing_owner": 154
-        }
+          "open_missing_next_activity": 158
+        },
+        "current": {
+          "open_deal_count": 142,
+          "open_missing_next_step": 128,
+          "stale_open_deals_30d": 101,
+          "open_missing_next_activity": 135
+        },
+        "note": "Counts now CRM-canonical (sheet script universe was larger — definition correction). missing_close_date 295 and missing_owner 154 unchanged. NEW: per-pipeline breakdown added under 'pipelines' — operating view (Ent+SB+Upsell) has 27 no-next-step; 101 of the portal-wide 128 are Karrot ABM automation noise."
       },
       {
         "field": "behavior_signals",
-        "previous": {
-          "gong_calls_7d": 68,
-          "gong_calls_14d": 129,
-          "most_recent_gong_call_days_ago": 0,
-          "gong_next_step_call_rate": 0.264,
-          "ai_wedge_call_rate": 0.287,
-          "standup_coverage_tue_fri": 1.0,
-          "meeting_to_action_quality": 0.614,
-          "owner_date_discipline": 0.364
-        },
-        "current": {
-          "gong_calls_7d": 76,
-          "gong_calls_14d": 135,
-          "most_recent_gong_call_days_ago": 0,
-          "gong_next_step_call_rate": 0.252,
-          "ai_wedge_call_rate": 0.281,
-          "standup_coverage_tue_fri": 1.0,
-          "meeting_to_action_quality": 0.548,
-          "owner_date_discipline": 0.286
-        }
+        "previous": "sheet refresh 2026-06-11T13:59Z",
+        "current": "carried (same values)",
+        "note": "Carried, not a real diff — no Gong/Granola connector in this environment; values are from the Jun 11 13:59 sheet refresh"
       }
     ]
   },
   "weekly_diff": {
     "baseline": false,
-    "changes": []
-  }
+    "compared_against": "2026-06-07T20:51:21.889293+00:00 snapshot (git b6ca894) — closest available baseline to last Friday 2026-06-05",
+    "changes": [
+      {
+        "field": "crm_forecast",
+        "previous": 1870600,
+        "current": 2145500,
+        "note": "+$274,900 since the Jun 7 baseline — all from weighted pipeline growth, zero from new closed-won"
+      },
+      {
+        "field": "gap_to_target",
+        "previous": -8129400,
+        "current": -7854500,
+        "note": "Improved $274,900 since Jun 7"
+      },
+      {
+        "field": "weighted_pipeline",
+        "previous": 1469000,
+        "current": 1743900,
+        "note": "+$274,900 since Jun 7"
+      },
+      {
+        "field": "capacity_model",
+        "previous": 6966378,
+        "current": 6580214,
+        "note": "Sheet assumptions revised between Jun 7 and Jun 10; further flagged stale because it uses $100K ACV vs canonical $180K"
+      },
+      {
+        "field": "actual_revenue",
+        "previous": 401600,
+        "current": 401600,
+        "note": "No closed-won revenue added since Jun 7"
+      },
+      {
+        "field": "risk_counts.open_missing_next_step",
+        "previous": 149,
+        "current": 128,
+        "note": "-21 since Jun 7 (CRM-canonical now); operating-pipeline subset is 27, the number that matters"
+      },
+      {
+        "field": "weekly_summary.revenue_booked",
+        "previous": {
+          "this_week": 0,
+          "prior_week": 0
+        },
+        "current": {
+          "this_week": 0,
+          "prior_week": 15000
+        },
+        "note": "Correction, not new revenue: CRM shows a $15,000 close in week of Jun 1-7 that the Actuals-Log-sourced summary missed"
+      }
+    ]
+  },
+  "provenance_note": "Daily diff compares against the Jun 11 13:59 automated snapshot; definition corrections are labeled as such and are not real movement. Weekly diff uses the Jun 7 snapshot as baseline (no Friday Jun 5 snapshot exists). Values marked 'carried' are not real diffs."
 }
