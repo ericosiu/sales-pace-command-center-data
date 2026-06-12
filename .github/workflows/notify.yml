@@ -1,0 +1,38 @@
+name: Morning standup ping
+
+on:
+  schedule:
+    # 13:30 UTC Mon-Fri = 6:30 AM PT, after the 6:00 data refresh
+    - cron: "30 13 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Post topline to Slack
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          if [ -z "$SLACK_WEBHOOK_URL" ]; then
+            echo "SLACK_WEBHOOK_URL secret not set — skipping ping (refresh still ran)."
+            exit 0
+          fi
+          STATUS=$(jq -r .status daily.json)
+          FORECAST=$(jq -r .crm_forecast daily.json)
+          GAP=$(jq -r .gap_to_target daily.json)
+          PACE=$(jq -r .pace_gap daily.json)
+          BOOKED=$(jq -r .actual_revenue daily.json)
+          NNS=$(jq -r .pipelines.operating_view.open_missing_next_step daily.json)
+          ASOF=$(jq -r .generated_at_utc daily.json | cut -c1-16)
+          fmt() { printf "%'d" "$1"; }
+          TEXT=":vertical_traffic_light: *Daily Sales Pace — ${STATUS}*
+          Forecast \$$(fmt $FORECAST) · Gap to \$10M \$$(fmt $GAP) · Pace gap \$$(fmt $PACE)
+          Booked (Q2+Q3) \$$(fmt $BOOKED) · No-next-step deals (operating): ${NNS}
+          Data as of ${ASOF} UTC · <https://ericosiu.github.io/sales-pace-command-center-data/preview.html|Open the command center>"
+          jq -n --arg t "$TEXT" '{text: $t}' | curl -sf -X POST -H 'Content-Type: application/json' -d @- "$SLACK_WEBHOOK_URL"
