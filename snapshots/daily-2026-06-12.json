@@ -1,0 +1,23 @@
+{
+  "crm_forecast": 2145500,
+  "gap_to_target": -7854500,
+  "open_pipeline": 3712000,
+  "weighted_pipeline": 1743900,
+  "actual_revenue": 401600,
+  "capacity_not_backed_by_crm": 4434714,
+  "generated_at_utc": "2026-06-12T22:03:47.975823+00:00",
+  "risk_counts": {
+    "open_deal_count": 142,
+    "open_missing_next_step": 125,
+    "stale_open_deals_30d": 100,
+    "open_missing_next_activity": 137,
+    "missing_close_date": 295,
+    "missing_owner": 154,
+    "recent_meeting_activity_14d": 10,
+    "stale_open_deals_gt_30d": 100,
+    "open_deals_missing_next_step": 125,
+    "open_deals_missing_next_activity": 137,
+    "deals_missing_close_date": 295,
+    "deals_missing_owner": 154
+  }
+}
