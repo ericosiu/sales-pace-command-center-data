@@ -1,0 +1,30 @@
+name: Weekday data refresh
+
+on:
+  schedule:
+    # 13:00 UTC Mon-Fri = 6:00 AM PT, before standup
+    - cron: "0 13 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Refresh from HubSpot (read-only)
+        env:
+          HUBSPOT_READ_KEY: ${{ secrets.HUBSPOT_READ_KEY }}
+        run: python3 scripts/refresh.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "Claude"
+          git config user.email "noreply@anthropic.com"
+          git add -A
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "Refresh Sales Pace Command Center data $(date -u +%Y-%m-%dT%H:%M:%SZ) (CRM-verified)"
+          git push
