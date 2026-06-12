@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Daily Sales Standup · 2026-06-12 · VERIFIED PREVIEW</title>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#F2EDE2; --card:#FBF8F0; --ink:#2B2B28; --muted:#8A857A; --terra:#C0512F; --line:#D9D2C2;
+    --red-fg:#B3361C; --red-bg:#F8DBD8; --amb-fg:#9A6A1B; --amb-bg:#F7E9C8; --grn-fg:#3E7C5B; --grn-bg:#DCECDC; --gry-fg:#6B675E; --gry-bg:#E8E4DA; }
+  *{box-sizing:border-box} html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:Arial,system-ui,sans-serif;font-size:14px;line-height:1.45;padding:40px 20px}
+  .display{font-family:'Crimson Text',Georgia,serif;font-weight:700}
+  .muted{color:var(--muted)} .terra{color:var(--terra)} .bold{font-weight:700} .small{font-size:12px} .num{text-align:right}
+  .slide{max-width:880px;margin:0 auto 32px;padding:24px 28px 32px}
+  .slide-header{display:grid;grid-template-columns:1fr 2fr 1fr;align-items:center;padding-bottom:12px}
+  .eyebrow{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+  .eyebrow.title{text-align:center;font-size:11px;letter-spacing:.2em} .eyebrow.page{text-align:right}
+  .hairline{border:0;border-top:1px solid var(--line);margin:0 0 20px}
+  .card{background:var(--card);border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,.06);padding:24px;margin-bottom:16px}
+  .card-label{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;margin-bottom:14px}
+  .pill{display:inline-flex;align-items:center;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.04em}
+  .pill.sm{font-size:10px;padding:3px 9px} .pill.large{font-size:13px;padding:6px 16px}
+  .pill.red{color:var(--red-fg);background:var(--red-bg)} .pill.amber{color:var(--amb-fg);background:var(--amb-bg)}
+  .pill.green{color:var(--grn-fg);background:var(--grn-bg)} .pill.gray{color:var(--gry-fg);background:var(--gry-bg)}
+  h1.display{font-size:32px;margin:0 0 6px}
+  .topline-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px}
+  .topline-table{width:100%;border-collapse:collapse}
+  .topline-table th{font-size:10px;font-weight:700;color:var(--muted);letter-spacing:.15em;padding:10px 8px;text-align:left;border-bottom:1px solid var(--line)}
+  .topline-table th.num{text-align:right}
+  .topline-table td{padding:12px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  .topline-table tr:last-child td{border-bottom:0}
+  .metric-name{font-size:14px;font-weight:700} .metric-explain{font-size:11px;margin-top:3px}
+  .grid-2col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .gap-row{display:flex;justify-content:space-between;align-items:baseline;padding:6px 0} .gap-num{font-size:18px}
+  .action-row{display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:center;padding:8px 0}
+  .funnel{display:flex;justify-content:space-between;gap:8px;margin:16px 0 24px}
+  .funnel-step{flex:1;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,.06);padding:16px 8px;text-align:center;background:var(--card)}
+  .funnel-num{font-size:28px;line-height:1;margin-bottom:6px} .funnel-label{font-size:11px} .funnel-conv{font-size:11px;margin-top:10px}
+  .hygiene-row{display:grid;grid-template-columns:2fr 2fr auto;gap:16px;align-items:center;padding:16px 24px;margin-bottom:10px}
+  .src-tag{font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-left:8px;vertical-align:middle}
+  .banner{max-width:880px;margin:0 auto 24px;background:var(--amb-bg);color:var(--amb-fg);border-radius:8px;padding:10px 16px;font-size:12px;font-weight:700;text-align:center}
+</style>
+</head>
+<body>
+<div class="banner">V2 PREVIEW · same layout as your deck, every number CRM-verified or honestly grayed · data as of 2026-06-12 00:20 UTC</div>
+
+<section class="slide">
+  <div class="slide-header">
+    <span class="eyebrow muted">DAILY STANDUP</span>
+    <span class="eyebrow terra title">TOPLINE · CURRENT VS TARGET VS GAP</span>
+    <span class="eyebrow muted page">01 / 06</span>
+  </div>
+  <hr class="hairline" />
+  <div class="topline-head">
+    <div>
+      <h1 class="display">Daily Sales Standup</h1>
+      <p class="muted small">Fri 2026-06-12 · $10M operating target · operating view: Enterprise + Single Brain + Upsell</p>
+    </div>
+    <span class="pill red large">OFF TRACK</span>
+  </div>
+  <table class="topline-table">
+    <thead><tr><th>METRIC</th><th class="num">CURRENT</th><th class="num">TARGET</th><th class="num">GAP</th><th class="num">STATUS</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><div class="metric-name">Revenue attainment <span class="src-tag" style="color:var(--grn-fg)">● CRM LIVE</span></div>
+            <div class="metric-explain muted">Forecast = closed-won + weighted open · 21.5% to goal, target-to-date $3.90M</div></td>
+        <td class="num">$2.15M</td><td class="num muted">$3.90M</td>
+        <td class="num bold" style="color:#B3361C">-$1.76M</td>
+        <td class="num"><span class="pill red">Off track</span></td>
+      </tr>
+      <tr>
+        <td><div class="metric-name">Closed-won vs pace <span class="src-tag" style="color:var(--grn-fg)">● CRM LIVE</span></div>
+            <div class="metric-explain muted">Booked Q2+Q3 (4 deals) vs where pace says we should be by Jun 12 · deck showed $1.20M — CRM says otherwise</div></td>
+        <td class="num">$401.6K</td><td class="num muted">$3.90M</td>
+        <td class="num bold" style="color:#B3361C">-$3.50M</td>
+        <td class="num"><span class="pill red">Off track</span></td>
+      </tr>
+      <tr>
+        <td><div class="metric-name">Weighted pipeline coverage <span class="src-tag" style="color:var(--grn-fg)">● CRM LIVE</span></div>
+            <div class="metric-explain muted">$1.74M expected from open deals vs $3.50M needed to catch up · need 3x cushion</div></td>
+        <td class="num">0.5x</td><td class="num muted">3.0x</td>
+        <td class="num bold" style="color:#B3361C">-2.5x</td>
+        <td class="num"><span class="pill red">Off track</span></td>
+      </tr>
+      <tr>
+        <td><div class="metric-name">New pipeline created Jun 11 <span class="src-tag" style="color:var(--grn-fg)">● CRM LIVE</span></div>
+            <div class="metric-explain muted">Zero net-new deals yesterday (Jun 10 had 4 / $270K)</div></td>
+        <td class="num">0 deals</td><td class="num muted">2 / day</td>
+        <td class="num bold" style="color:#B3361C">-2</td>
+        <td class="num"><span class="pill red">Off track</span></td>
+      </tr>
+      <tr>
+        <td><div class="metric-name">CRM hygiene · operating pipelines <span class="src-tag" style="color:var(--grn-fg)">● CRM LIVE</span></div>
+            <div class="metric-explain muted">27 of 37 working deals missing next step ($3.55M at risk of drift)</div></td>
+        <td class="num">27 open</td><td class="num muted">0</td>
+        <td class="num bold" style="color:#B3361C">-27</td>
+        <td class="num"><span class="pill red">Open</span></td>
+      </tr>
+      <tr>
+        <td><div class="metric-name">Call next-step discipline <span class="src-tag" style="color:var(--amb-fg)">● CARRIED ~11H</span></div>
+            <div class="metric-explain muted">25.2% of Gong calls end with logged next step · sheet-carried, no live Gong connector</div></td>
+        <td class="num">25.2%</td><td class="num muted">70%</td>
+        <td class="num bold" style="color:#9A6A1B">-44.8pt</td>
+        <td class="num"><span class="pill amber">Stale</span></td>
+      </tr>
+      <tr>
+        <td><div class="metric-name">Proposals / discoveries this week <span class="src-tag" style="color:var(--gry-fg)">● NOT WIRED</span></div>
+            <div class="metric-explain muted">Actuals Log empty + no approved CRM stage mapping · already missed a real $15K close</div></td>
+        <td class="num">no signal</td><td class="num muted">—</td>
+        <td class="num bold" style="color:#6B675E">·</td>
+        <td class="num"><span class="pill gray">Not wired</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="slide">
+  <div class="slide-header">
+    <span class="eyebrow muted">DAILY STANDUP</span>
+    <span class="eyebrow terra title">WHAT CHANGED · YESTERDAY &amp; LAST FRIDAY</span>
+    <span class="eyebrow muted page">02 / 06</span>
+  </div>
+  <hr class="hairline" />
+  <div class="grid-2col">
+    <div class="card">
+      <div class="card-label muted">VS YESTERDAY (JUN 11 13:59 SNAPSHOT)</div>
+      <div class="gap-row"><span class="muted">Forecast</span><span class="display gap-num" style="color:#3E7C5B">+$153.5K → $2.15M</span></div>
+      <div class="gap-row"><span class="muted">Gap to $10M</span><span class="display gap-num" style="color:#3E7C5B">−$7.85M (improved)</span></div>
+      <div class="gap-row"><span class="muted">New deals created</span><span class="display gap-num" style="color:#B3361C">0</span></div>
+      <div class="gap-row"><span class="muted">Closes</span><span class="display gap-num" style="color:#B3361C">0</span></div>
+      <p class="muted small italic">Forecast gain is existing Enterprise deals growing in value — pipeline movement, not bookings.</p>
+    </div>
+    <div class="card">
+      <div class="card-label muted">VS LAST FRIDAY (JUN 7 BASELINE)</div>
+      <div class="gap-row"><span class="muted">Forecast</span><span class="display gap-num" style="color:#3E7C5B">+$274.9K</span></div>
+      <div class="gap-row"><span class="muted">Closed-won added</span><span class="display gap-num" style="color:#B3361C">$0</span></div>
+      <div class="gap-row"><span class="muted">No-next-step deals</span><span class="display gap-num" style="color:#3E7C5B">149 → 128</span></div>
+      <div class="gap-row"><span class="muted">Revenue booked (wk)</span><span class="display gap-num" style="color:#2B2B28">$15K → $0</span></div>
+      <p class="muted small italic">All week-over-week gain is weighted pipeline; zero from bookings. The $15K close (Jun 1-7) was caught by CRM — the Actuals Log missed it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="slide-header">
+    <span class="eyebrow muted">DAILY STANDUP</span>
+    <span class="eyebrow terra title">RECOVERY ACTIONS · TODAY'S MOVE</span>
+    <span class="eyebrow muted page">03 / 06</span>
+  </div>
+  <hr class="hairline" />
+  <div class="card">
+    <div class="card-label muted">RECOVERY ACTIONS · OWNER AND DUE DATE ON EVERY LINE</div>
+    <div class="action-row">
+      <span>Assign owner + next step on the 18 Enterprise no-next-step deals ($2.92M open)</span>
+      <span class="terra bold">Eric</span><span class="muted"><span class="pill red sm">overdue 6/8</span></span>
+    </div>
+    <div class="action-row">
+      <span>Clear next steps on 6 Single Brain + 3 Upsell deals ($634K)</span>
+      <span class="terra bold">Eric</span><span class="muted">today</span>
+    </div>
+    <div class="action-row">
+      <span>Create net-new pipeline — zero deals created 6/11, target 2/day</span>
+      <span class="terra bold">team</span><span class="muted">today</span>
+    </div>
+    <div class="action-row">
+      <span>Update sheet ACV cell to canonical $180K (capacity model recalc)</span>
+      <span class="terra bold">Eric</span><span class="muted">5 min</span>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-label terra">TODAY'S MOVE</div>
+    <p>Standup starts from the 18 Enterprise no-next-step deals. That list is $2.92M of real pipeline one habit away from drifting stale — and it's small enough to clear in one session.</p>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="slide-header">
+    <span class="eyebrow muted">DAILY STANDUP</span>
+    <span class="eyebrow terra title">PIPELINE HYGIENE · OPERATING VIEW VS AUTOMATION</span>
+    <span class="eyebrow muted page">04 / 06</span>
+  </div>
+  <hr class="hairline" />
+  <div class="hygiene-list">
+    <div class="card hygiene-row">
+      <span class="bold">Enterprise — the revenue engine</span>
+      <span class="muted num">27 open · $2,916,000 · 18 missing next step</span>
+      <span class="pill red">Fix first</span>
+    </div>
+    <div class="card hygiene-row">
+      <span class="bold">Upsell</span>
+      <span class="muted num">4 open · $534,000 · 3 missing next step</span>
+      <span class="pill amber">Quick clear</span>
+    </div>
+    <div class="card hygiene-row">
+      <span class="bold">Single Brain — land motion</span>
+      <span class="muted num">6 open · $100,000 · 6 missing next step</span>
+      <span class="pill amber">Quick clear</span>
+    </div>
+    <div class="card hygiene-row">
+      <span class="bold">Karrot ABM — automation lane</span>
+      <span class="muted num">105 open · $162,000 · 101 missing next step</span>
+      <span class="pill gray">Excluded from status</span>
+    </div>
+  </div>
+  <p class="muted small">Portal-wide headlines (142 deals / 128 no-next-step) blend automation noise into the operating picture — this view is why the per-pipeline split is now canonical.</p>
+</section>
+
+<section class="slide">
+  <div class="slide-header">
+    <span class="eyebrow muted">DAILY STANDUP</span>
+    <span class="eyebrow terra title">FULL-FUNNEL MATH · WHAT 1 CLOSE COSTS</span>
+    <span class="eyebrow muted page">05 / 06</span>
+  </div>
+  <hr class="hairline" />
+  <p class="terra bold small">ACV $180K (canonical, Eric 2026-06-11) · conversion rates from deck — <span class="pill gray sm">NOT WIRED</span> until lead-stage source is traced</p>
+  <div class="funnel">
+    <div class="funnel-step"><div class="display funnel-num muted">89</div><div class="muted small funnel-label">raw leads</div><div class="funnel-conv muted small">unverified</div></div>
+    <div class="funnel-step"><div class="display funnel-num muted">21</div><div class="muted small funnel-label">MQLs</div><div class="funnel-conv muted small">unverified</div></div>
+    <div class="funnel-step"><div class="display funnel-num muted">11.2</div><div class="muted small funnel-label">SALs</div><div class="funnel-conv muted small">unverified</div></div>
+    <div class="funnel-step"><div class="display funnel-num muted">4.0</div><div class="muted small funnel-label">SQLs</div><div class="funnel-conv muted small">unverified</div></div>
+    <div class="funnel-step"><div class="display funnel-num muted">3.3</div><div class="muted small funnel-label">proposals</div><div class="funnel-conv muted small">unverified</div></div>
+    <div class="funnel-step" style="background:var(--grn-bg);color:var(--grn-fg)"><div class="display funnel-num">1</div><div class="small funnel-label">close · $180K</div></div>
+  </div>
+  <div class="card">
+    <div class="card-label muted">WHAT IS VERIFIED ABOUT THE FUNNEL</div>
+    <p class="bold">Remaining target $9.60M ÷ $180K = 53 closes needed in 16 weeks ≈ 3.3 closes/week — current pace: 4 closes in 10 weeks.</p>
+    <p class="muted small">The stage-by-stage volumes go live the moment the lead-stage source is traced or the HubSpot stage mapping is approved — until then they render gray, not as facts.</p>
+  </div>
+</section>
+
+<section class="slide">
+  <div class="slide-header">
+    <span class="eyebrow muted">DAILY STANDUP</span>
+    <span class="eyebrow terra title">SOURCE FRESHNESS · TRUST PANEL</span>
+    <span class="eyebrow muted page">06 / 06</span>
+  </div>
+  <hr class="hairline" />
+  <div class="card">
+    <div class="card-label muted">EVERY NUMBER ON THIS PAGE TRACES TO ONE OF THESE</div>
+    <div class="action-row"><span class="bold">HubSpot CRM (live, read-only)</span><span class="muted small">2026-06-12 00:20 UTC</span><span class="pill green sm">LIVE</span></div>
+    <div class="action-row"><span class="bold">Operating Google Sheet</span><span class="muted small">2026-06-11 13:59 UTC</span><span class="pill amber sm">STALE ~11H</span></div>
+    <div class="action-row"><span class="bold">Gong + Granola</span><span class="muted small">carried from sheet</span><span class="pill amber sm">STALE</span></div>
+    <div class="action-row"><span class="bold">Lead stages (MQL/SAL/SQL)</span><span class="muted small">source untraced</span><span class="pill gray sm">NOT WIRED</span></div>
+    <div class="action-row"><span class="bold">Proposals / discoveries</span><span class="muted small">pending stage-mapping approval</span><span class="pill gray sm">NOT WIRED</span></div>
+  </div>
+  <p class="muted small">Lead-level cards (client names) render only in the password-protected deploy — never in the public data layer. Preview generated from production data at ericosiu.github.io/sales-pace-command-center-data.</p>
+</section>
+</body>
+</html>
