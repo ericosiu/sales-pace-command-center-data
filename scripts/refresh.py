@@ -38,6 +38,17 @@ OPERATING = {"enterprise", "single_brain", "upsell"}
 CLOSED_WON_START = "2026-04-01"
 CLOSED_WON_END = "2026-09-30"
 TARGET = 10_000_000
+UPSIDE_TARGET = 20_000_000  # Eric 2026-06-12: stretch gaps may appear in daily topline, labeled; status keys off $10M only
+
+
+def q2q3_target_to_date(target, today):
+    """Canonical pace (Eric 2026-06-12): target accrues linearly over Q2+Q3
+    (2026-04-01..2026-09-30, 183 days), counting complete days before today."""
+    from datetime import date
+    start, end = date(2026, 4, 1), date(2026, 9, 30)
+    total = (end - start).days + 1
+    elapsed = max(0, min((today - start).days, total))
+    return round(target * elapsed / total)
 
 
 def search(filters, properties=None, fetch_all=False):
@@ -148,6 +159,8 @@ pw_count, pw_rev = week_closed_won(prev_monday, prev_monday + timedelta(days=6))
 
 forecast = actual_revenue + weighted_sum
 gap = forecast - TARGET
+target_to_date = q2q3_target_to_date(TARGET, TODAY)
+upside_target_to_date = q2q3_target_to_date(UPSIDE_TARGET, TODAY)
 
 # ---- Load previous files (carried fields + diff baseline) ----
 with open("daily.json") as f:
@@ -166,6 +179,16 @@ daily.update({
     "status": "OFF TRACK" if forecast < TARGET else "ON TRACK",
     "actual_revenue": actual_revenue,
     "crm_forecast": forecast,
+    "target_to_date": target_to_date,
+    "pace_gap": forecast - target_to_date,
+    "pace_convention": "Q2+Q3 linear (2026-04-01..2026-09-30), canonical per Eric 2026-06-12",
+    "upside": {
+        "target": UPSIDE_TARGET,
+        "gap_to_target": forecast - UPSIDE_TARGET,
+        "target_to_date": upside_target_to_date,
+        "pace_gap": forecast - upside_target_to_date,
+        "note": "Stretch lane, labeled column only (Eric 2026-06-12). Status pills key off $10M.",
+    },
     "capacity_not_backed_by_crm": (capacity_model - forecast) if capacity_model else None,
     "gap_to_target": gap,
     "open_pipeline": open_sum,
@@ -211,7 +234,8 @@ daily["sources"][0] = {
     "range": "DEAL aggregates, portal-wide and per-pipeline",
     "refreshed_at_utc": NOW_ISO,
 }
-flags = [f for f in daily.get("data_quality_flags", []) if not f.startswith("crm_forecast")]
+flags = [f for f in daily.get("data_quality_flags", [])
+         if not f.startswith("crm_forecast") and "target_to_date carried" not in f]
 daily["data_quality_flags"] = [
     f"crm_forecast, actual_revenue, open_pipeline, weighted_pipeline, risk_counts, and per-pipeline counts "
     f"verified live against HubSpot CRM (read-only API) at {NOW_ISO}. HubSpot is canonical."

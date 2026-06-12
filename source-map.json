@@ -5,12 +5,14 @@
   "path_written": "ericosiu/sales-pace-command-center-data (repo root)",
   "requested_path_available": false,
   "canonical_rules": {
-    "operating_target": "$10M is the operating target; $20M is upside scoreboard, not daily execution status.",
+    "operating_target": "$10M is the operating target and drives all status pills. $20M stretch gaps MAY appear in the daily topline as clearly labeled columns (rule amended by Eric 2026-06-12); $20M never determines status.",
     "forecast": "CRM (HubSpot) forecast is canonical for Monday standup. Live HubSpot read supersedes the sheet's HubSpot Daily Snapshot when newer.",
     "capacity_model": "Top-down capacity model is recovery potential until backed by weighted CRM pipeline.",
     "closed_won_period": "Q2+Q3 2026 (closedate 2026-04-01 to 2026-09-30) — verified: live CRM returns exactly $401,600 / 4 deals for this window.",
     "pipeline_scope": "Operating view = Enterprise + Single Brain + Upsell (Eric, 2026-06-11). Karrot ABM is a separate labeled automation lane, never blended into status or hygiene counts.",
-    "acv": "Canonical ACV = $180K (Eric, 2026-06-11). Sheet assumption cell still says $100K — sheet capacity model flagged stale until updated."
+    "acv": "Canonical ACV = $180K (Eric, 2026-06-11). Sheet assumption cell still says $100K — sheet capacity model flagged stale until updated.",
+    "pace": "Canonical pace = Q2+Q3 linear: target × complete-days-elapsed / 183 over 2026-04-01..2026-09-30 (Eric, 2026-06-12). Calendar-year pace is deprecated. Today: $10M pace mark $3,934,426.",
+    "closed_won_headline": "Deck/dashboard headline 'booked' = daily.actual_revenue (CRM Q2+Q3 closed-won, $401,600 as of Jun 12). The untraced $1.20M figure is retired (Eric, 2026-06-12)."
   },
   "live_connectors": [
     {
@@ -84,11 +86,11 @@
     },
     {
       "metric": "daily.target_to_date",
-      "source_tab": "Trend Data",
-      "upstream": "Trend Data target pace",
-      "source_type": "sheet-derived",
-      "refreshed_at_utc": "2026-06-11T13:57:41.688897+00:00",
-      "evidence_note": "STALE by 1 day — pace formula lives in the sheet; carried from 06-10 value $3,846,154."
+      "source_tab": "Derived",
+      "upstream": "Q2+Q3 linear pace convention",
+      "source_type": "derived-canonical",
+      "refreshed_at_utc": "2026-06-12T19:10:00+00:00",
+      "evidence_note": "$10M × 72/183 days = $3,934,426. Convention set by Eric 2026-06-12; replaces sheet Trend Data carry."
     },
     {
       "metric": "daily.actual_revenue",

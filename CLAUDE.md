@@ -10,7 +10,15 @@ to answer, in under 30 seconds of reading:
 4. Which source produced each metric? 5. What is stale, missing, or contradictory?
 
 ## Canonical rules (do not relitigate)
-- **$10M is the operating target.** $20M is upside scoreboard only — never daily status.
+- **$10M is the operating target and drives all status pills.** $20M stretch gaps may
+  appear in the daily topline as clearly labeled columns (rule amended by Eric
+  2026-06-12) but never determine status.
+- **Canonical pace = Q2+Q3 linear** (target × complete-days / 183 over
+  2026-04-01..2026-09-30; Eric 2026-06-12). Calendar-year pace is deprecated.
+- **Headline "booked" = CRM Q2+Q3 closed-won** (`daily.actual_revenue`). The untraced
+  $1.20M figure is retired (Eric 2026-06-12).
+- **Deck generation contract lives in DECK_SPEC.md** — the Mac deck session must fetch
+  the live JSONs, never regenerate numbers from session memory.
 - **HubSpot CRM is canonical** for forecast, revenue, pipeline, and risk counts.
   When a live CRM read disagrees with the Google Sheet snapshot, CRM wins and the
   disagreement gets flagged, not silently resolved.

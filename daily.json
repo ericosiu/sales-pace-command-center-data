@@ -7,7 +7,7 @@
   "upside_status": "UPSIDE GAP",
   "trend": "Mixed: forecast up $153.5K on existing Enterprise deal growth, but zero new deals created Jun 11 and zero closes this week",
   "target": 10000000,
-  "target_to_date": 3901099,
+  "target_to_date": 3934426,
   "actual_revenue": 401600,
   "crm_forecast": 2145500,
   "capacity_model": 6580214,
@@ -81,7 +81,7 @@
     "capacity_model ($6,580,214, sheet Jun 11 13:57Z) is computed with SG ACV $100K; Eric set canonical ACV = $180K on 2026-06-11, so the sheet's capacity math is STALE until its assumption cell is updated (agents are read-only on Sheets).",
     "behavior_signals (Gong + Granola) carried from sheet refresh 2026-06-11T13:59Z; no Gong/Granola connector in this environment — STALE ~10.5h.",
     "risk_counts.recent_meeting_activity_14d carried; HubSpot property hs_latest_meeting_activity is hidden in this portal — BLOCKED, unverifiable.",
-    "target_to_date carried from sheet Trend Data (Jun 11 13:57Z) — STALE by ~10.5h; refreshes with the sheet's weekday job."
+    "target_to_date now computed by canonical Q2+Q3 linear convention (Eric 2026-06-12); no longer carried from sheet Trend Data."
   ],
   "sources": [
     {
@@ -124,5 +124,14 @@
       "range": "A1:Z200",
       "refreshed_at_utc": "2026-06-11T13:57:41.688897+00:00"
     }
-  ]
+  ],
+  "pace_gap": -1788926,
+  "pace_convention": "Q2+Q3 linear (2026-04-01..2026-09-30), canonical per Eric 2026-06-12",
+  "upside": {
+    "target": 20000000,
+    "gap_to_target": -17854500,
+    "target_to_date": 7868852,
+    "pace_gap": -5723352,
+    "note": "Stretch lane, labeled column only (Eric 2026-06-12). Status pills key off $10M."
+  }
 }
