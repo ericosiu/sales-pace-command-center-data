@@ -1,6 +1,6 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-12T22:03:47.975823+00:00",
+  "generated_at_utc": "2026-06-15T15:01:46.941200+00:00",
   "period": "weekly",
   "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
   "status": "OFF TRACK",
@@ -13,9 +13,9 @@
   "weekly_summary": {
     "closed_won_deals": {
       "this_week": 0,
-      "prior_week": 1,
-      "delta": -1,
-      "direction": "Worse",
+      "prior_week": 0,
+      "delta": 0,
+      "direction": "No activity / no movement",
       "operating_implication": "One close last week per CRM, none through Thursday this week; inspect late-stage coverage",
       "source": "HubSpot live (CRM canonical); supersedes Actuals Log zeros"
     },
@@ -37,9 +37,9 @@
     },
     "revenue_booked": {
       "this_week": 0,
-      "prior_week": 15000,
-      "delta": -15000,
-      "direction": "Worse",
+      "prior_week": 0,
+      "delta": 0,
+      "direction": "No activity / no movement",
       "operating_implication": "Prior week booked $15,000 (closed-won per CRM, 2026-06-01 to 06-07); this week zero through Thursday",
       "source": "HubSpot live (CRM canonical); contradicts Actuals Log which shows $0 — Actuals Log is not being filled in"
     }
