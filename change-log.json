@@ -1,16 +1,35 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-15T15:01:46.941200+00:00",
+  "generated_at_utc": "2026-06-16T14:36:05.925356+00:00",
   "baseline": false,
   "daily_diff": {
     "baseline": false,
-    "compared_against": "previous published snapshot (2026-06-12T22:03:47.975823+00:00)",
+    "compared_against": "previous published snapshot (2026-06-15T15:01:46.941200+00:00)",
     "changes": [
       {
-        "field": "all",
-        "previous": "carried",
-        "current": "carried",
-        "note": "No movement in tracked fields — labeled carried, not shown as a diff."
+        "field": "crm_forecast",
+        "previous": 2145500,
+        "current": 3191500
+      },
+      {
+        "field": "gap_to_target",
+        "previous": -7854500,
+        "current": -6808500
+      },
+      {
+        "field": "open_pipeline",
+        "previous": 3712000,
+        "current": 5452000
+      },
+      {
+        "field": "weighted_pipeline",
+        "previous": 1743900,
+        "current": 2789900
+      },
+      {
+        "field": "capacity_not_backed_by_crm",
+        "previous": 4434714,
+        "current": 3388714
       }
     ]
   },
