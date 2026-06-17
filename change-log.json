@@ -1,35 +1,30 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-16T14:36:05.925356+00:00",
+  "generated_at_utc": "2026-06-17T14:11:02.259291+00:00",
   "baseline": false,
   "daily_diff": {
     "baseline": false,
-    "compared_against": "previous published snapshot (2026-06-15T15:01:46.941200+00:00)",
+    "compared_against": "previous published snapshot (2026-06-16T14:36:05.925356+00:00)",
     "changes": [
       {
         "field": "crm_forecast",
-        "previous": 2145500,
-        "current": 3191500
+        "previous": 3191500,
+        "current": 3221500
       },
       {
         "field": "gap_to_target",
-        "previous": -7854500,
-        "current": -6808500
-      },
-      {
-        "field": "open_pipeline",
-        "previous": 3712000,
-        "current": 5452000
+        "previous": -6808500,
+        "current": -6778500
       },
       {
         "field": "weighted_pipeline",
-        "previous": 1743900,
-        "current": 2789900
+        "previous": 2789900,
+        "current": 2819900
       },
       {
         "field": "capacity_not_backed_by_crm",
-        "previous": 4434714,
-        "current": 3388714
+        "previous": 3388714,
+        "current": 3358714
       }
     ]
   },
