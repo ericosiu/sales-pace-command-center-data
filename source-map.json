@@ -1,6 +1,6 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-22T14:51:42.967489+00:00",
+  "generated_at_utc": "2026-06-23T13:49:22.881869+00:00",
   "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
   "path_written": "ericosiu/sales-pace-command-center-data (repo root)",
   "requested_path_available": false,
@@ -18,7 +18,7 @@
     {
       "name": "HubSpot MCP (read-only aggregate SQL)",
       "status": "LIVE",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "note": "Aggregates only; no raw deal records, names, or PII pulled into this layer."
     },
     {
@@ -57,7 +57,7 @@
       "source_tab": "Derived",
       "upstream": "Live HubSpot forecast vs $10M target pace",
       "source_type": "live-connector-derived",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "Forecast $1,992,000 vs target-to-date $3,846,154 and target $10M — OFF TRACK."
     },
     {
@@ -73,7 +73,7 @@
       "source_tab": "Derived",
       "upstream": "Live HubSpot day-over-day and week-over-week deltas",
       "source_type": "live-connector-derived",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "Weighted pipeline +$134,500 vs 06-10 sheet snapshot; $270K new pipeline created Jun 10-11; 0 closes this week vs $15K prior week."
     },
     {
@@ -97,7 +97,7 @@
       "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
       "source_type": "live-connector",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "SUM(amount_in_home_currency) WHERE hs_is_closed_won AND closedate in 2026-04-01..2026-09-30 = $401,600 (4 deals). Matches sheet and brief — VERIFIED."
     },
     {
@@ -105,7 +105,7 @@
       "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
       "source_type": "live-connector",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "Closed-won $401,600 + weighted open pipeline $1,590,400 = $1,992,000. Supersedes sheet snapshot $1,857,500 (06-10) and brief baseline $1,870,600 (06-07)."
     },
     {
@@ -129,7 +129,7 @@
       "source_tab": "Derived",
       "upstream": "crm_forecast - $10M target",
       "source_type": "live-connector-derived",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "$1,992,000 - $10,000,000 = -$8,008,000."
     },
     {
@@ -137,7 +137,7 @@
       "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
       "source_type": "live-connector",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "SUM(amount_in_home_currency) WHERE hs_is_closed = false = $3,412,000 across 142 open deals. See contradictions[1] for the $804K overnight drop."
     },
     {
@@ -145,7 +145,7 @@
       "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
       "source_type": "live-connector",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "SUM(hs_projected_amount) WHERE hs_is_closed = false = $1,590,400."
     },
     {
@@ -185,7 +185,7 @@
       "source_tab": "Derived",
       "upstream": "Live HubSpot risk counts",
       "source_type": "live-connector-derived",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "Built from live counts: 128 no-next-step, 101 stale, 131 missing next activity."
     },
     {
@@ -193,7 +193,7 @@
       "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
       "source_type": "live-connector",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "Deals created 2026-06-10..06-11: 4 deals / $270,000 new pipeline; 23 deals modified in same window."
     },
     {
@@ -201,7 +201,7 @@
       "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
       "source_type": "live-connector",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "COUNT(*) WHERE hs_is_closed = false = 142."
     },
     {
@@ -209,7 +209,7 @@
       "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
       "source_type": "live-connector",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "COUNT(*) open AND notes_last_updated < 2026-05-12 = 101."
     },
     {
@@ -217,7 +217,7 @@
       "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
       "source_type": "live-connector",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "COUNT(*) open AND hs_next_step IS NULL = 128."
     },
     {
@@ -225,7 +225,7 @@
       "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
       "source_type": "live-connector",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "COUNT(*) open AND notes_next_activity_date IS NULL = 131."
     },
     {
@@ -233,7 +233,7 @@
       "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
       "source_type": "live-connector",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "COUNT(*) WHERE closedate IS NULL = 295 (all deals, unchanged)."
     },
     {
@@ -241,7 +241,7 @@
       "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
       "source_type": "live-connector",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "COUNT(*) WHERE hubspot_owner_id IS NULL = 154 (all deals, unchanged)."
     },
     {
@@ -265,7 +265,7 @@
       "source_tab": "Derived",
       "upstream": "Live HubSpot forecast vs $10M",
       "source_type": "live-connector-derived",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "OFF TRACK — forecast $1,992,000 vs $10M."
     },
     {
@@ -273,7 +273,7 @@
       "source_tab": "Derived",
       "upstream": "Live HubSpot closed-won week-over-week",
       "source_type": "live-connector-derived",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "0 closes / $0 this week (Jun 8-14, in progress) vs 1 close / $15,000 prior week — Worse."
     },
     {
@@ -281,7 +281,7 @@
       "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
       "source_type": "live-connector",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "COUNT closed-won by closedate week: this week 0, prior week 1. Supersedes empty Actuals Log."
     },
     {
@@ -289,7 +289,7 @@
       "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
       "source_type": "live-connector",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "SUM closed-won amount by closedate week: this week $0, prior week $15,000. CONTRADICTS Actuals Log ($0) — CRM canonical."
     },
     {
@@ -329,7 +329,7 @@
       "source_tab": "HubSpot Live (MCP)",
       "upstream": "HubSpot CRM",
       "source_type": "live-connector",
-      "refreshed_at_utc": "2026-06-22T14:51:42.967489+00:00",
+      "refreshed_at_utc": "2026-06-23T13:49:22.881869+00:00",
       "evidence_note": "COUNT/SUM grouped by pipeline WHERE hs_is_closed=false. Operating view = Enterprise (27/$2,916,000, 18 no-next-step) + Single Brain (6/$100,000, 6) + Upsell (4/$534,000, 3); Karrot ABM automation lane = 105/$162,000, 101 no-next-step."
     }
   ],
