@@ -1,13 +1,13 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-06-29T14:21:43.588098+00:00",
+  "generated_at_utc": "2026-06-30T13:33:10.425824+00:00",
   "period": "daily",
   "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
   "status": "OFF TRACK",
   "upside_status": "UPSIDE GAP",
   "trend": "Mixed: forecast up $153.5K on existing Enterprise deal growth, but zero new deals created Jun 11 and zero closes this week",
   "target": 10000000,
-  "target_to_date": 4863388,
+  "target_to_date": 4918033,
   "actual_revenue": 401600,
   "crm_forecast": 3816300,
   "capacity_model": 6580214,
@@ -16,32 +16,32 @@
   "open_pipeline": 6278000,
   "weighted_pipeline": 3414700,
   "biggest_gap": "CRM Hygiene",
-  "recovery_action": "Assign owner for the 31 no-next-step deals in the operating pipelines (Enterprise 20, Single Brain 8, Upsell 3). Karrot ABM's 101 are automation noise, handled as a separate lane.",
+  "recovery_action": "Assign owner for the 32 no-next-step deals in the operating pipelines (Enterprise 20, Single Brain 9, Upsell 3). Karrot ABM's 101 are automation noise, handled as a separate lane.",
   "owner": "Eric Siu",
   "due_date": "2026-06-08",
   "operating_implication": "Run recovery action today (action overdue since 2026-06-08)",
-  "required_activity_today": "Clean 31 no-next-step deals in operating pipelines; recover stale deals; create net-new pipeline",
-  "actual_activity_yesterday_today": "0 new pipeline / 12 modified",
+  "required_activity_today": "Clean 32 no-next-step deals in operating pipelines; recover stale deals; create net-new pipeline",
+  "actual_activity_yesterday_today": "0 new pipeline / 16 modified",
   "risk_counts": {
-    "open_deal_count": 148,
-    "open_missing_next_step": 132,
+    "open_deal_count": 149,
+    "open_missing_next_step": 133,
     "stale_open_deals_30d": 100,
-    "open_missing_next_activity": 141,
+    "open_missing_next_activity": 140,
     "missing_close_date": 295,
     "missing_owner": 154,
     "recent_meeting_activity_14d": 10,
     "stale_open_deals_gt_30d": 100,
-    "open_deals_missing_next_step": 132,
-    "open_deals_missing_next_activity": 141,
+    "open_deals_missing_next_step": 133,
+    "open_deals_missing_next_activity": 140,
     "deals_missing_close_date": 295,
     "deals_missing_owner": 154
   },
   "pipelines": {
     "operating_view": {
       "definition": "Enterprise + Single Brain + Upsell (Eric, 2026-06-11). Karrot ABM excluded from status and hygiene counts.",
-      "open_deal_count": 43,
+      "open_deal_count": 44,
       "open_pipeline": 6116000,
-      "open_missing_next_step": 31
+      "open_missing_next_step": 32
     },
     "enterprise": {
       "open_deal_count": 29,
@@ -49,9 +49,9 @@
       "open_missing_next_step": 20
     },
     "single_brain": {
-      "open_deal_count": 10,
+      "open_deal_count": 11,
       "open_pipeline": 158000,
-      "open_missing_next_step": 8
+      "open_missing_next_step": 9
     },
     "upsell": {
       "open_deal_count": 4,
@@ -76,7 +76,7 @@
     "owner_date_discipline": 0.286
   },
   "data_quality_flags": [
-    "crm_forecast, actual_revenue, open_pipeline, weighted_pipeline, risk_counts, and per-pipeline counts verified live against HubSpot CRM (read-only API) at 2026-06-29T14:21:43.588098+00:00. HubSpot is canonical.",
+    "crm_forecast, actual_revenue, open_pipeline, weighted_pipeline, risk_counts, and per-pipeline counts verified live against HubSpot CRM (read-only API) at 2026-06-30T13:33:10.425824+00:00. HubSpot is canonical.",
     "RESOLVED CONTRADICTION: the Jun 10-11 $804K 'open pipeline drop' was a definition mismatch, not deal movement — the sheet snapshot script counts an open-deal universe 24 deals/$774K larger than hs_is_closed=false while weighted pipeline matches CRM to the dollar. Fix the script or accept the CRM definition (canonical per spec).",
     "capacity_model ($6,580,214, sheet Jun 11 13:57Z) is computed with SG ACV $100K; Eric set canonical ACV = $180K on 2026-06-11, so the sheet's capacity math is STALE until its assumption cell is updated (agents are read-only on Sheets).",
     "behavior_signals (Gong + Granola) carried from sheet refresh 2026-06-11T13:59Z; no Gong/Granola connector in this environment — STALE ~10.5h.",
@@ -87,7 +87,7 @@
     {
       "tab": "HubSpot Live (GitHub Action, read-only API aggregates)",
       "range": "DEAL aggregates, portal-wide and per-pipeline",
-      "refreshed_at_utc": "2026-06-29T14:21:43.588098+00:00"
+      "refreshed_at_utc": "2026-06-30T13:33:10.425824+00:00"
     },
     {
       "tab": "Dashboard",
@@ -125,13 +125,13 @@
       "refreshed_at_utc": "2026-06-11T13:57:41.688897+00:00"
     }
   ],
-  "pace_gap": -1047088,
+  "pace_gap": -1101733,
   "pace_convention": "Q2+Q3 linear (2026-04-01..2026-09-30), canonical per Eric 2026-06-12",
   "upside": {
     "target": 20000000,
     "gap_to_target": -16183700,
-    "target_to_date": 9726776,
-    "pace_gap": -5910476,
+    "target_to_date": 9836066,
+    "pace_gap": -6019766,
     "note": "Stretch lane, labeled column only (Eric 2026-06-12). Status pills key off $10M."
   }
 }
