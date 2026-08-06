@@ -1,10 +1,10 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-08-05T13:31:35.492466+00:00",
+  "generated_at_utc": "2026-08-06T15:05:25.748537+00:00",
   "baseline": false,
   "daily_diff": {
     "baseline": false,
-    "compared_against": "previous published snapshot (2026-08-04T13:32:16.650195+00:00)",
+    "compared_against": "previous published snapshot (2026-08-05T13:31:35.492466+00:00)",
     "changes": [
       {
         "field": "all",
