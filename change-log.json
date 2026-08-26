@@ -1,40 +1,40 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-08-25T13:39:40.702167+00:00",
+  "generated_at_utc": "2026-08-26T13:43:58.348289+00:00",
   "baseline": false,
   "daily_diff": {
     "baseline": false,
-    "compared_against": "previous published snapshot (2026-08-24T13:41:27.130554+00:00)",
+    "compared_against": "previous published snapshot (2026-08-25T13:39:40.702167+00:00)",
     "changes": [
       {
         "field": "crm_forecast",
-        "previous": 4976700,
-        "current": 4704700
+        "previous": 4704700,
+        "current": 4696200
       },
       {
         "field": "gap_to_target",
-        "previous": -5023300,
-        "current": -5295300
+        "previous": -5295300,
+        "current": -5303800
       },
       {
         "field": "open_pipeline",
-        "previous": 8084000,
-        "current": 7342000
+        "previous": 7342000,
+        "current": 7294000
       },
       {
         "field": "weighted_pipeline",
-        "previous": 4395100,
-        "current": 3943100
+        "previous": 3943100,
+        "current": 3926600
       },
       {
         "field": "actual_revenue",
-        "previous": 581600,
-        "current": 761600
+        "previous": 761600,
+        "current": 769600
       },
       {
         "field": "capacity_not_backed_by_crm",
-        "previous": 1603514,
-        "current": 1875514
+        "previous": 1875514,
+        "current": 1884014
       }
     ]
   },
