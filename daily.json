@@ -1,6 +1,6 @@
 {
   "version": "v1",
-  "generated_at_utc": "2026-10-01T18:36:48.503879+00:00",
+  "generated_at_utc": "2026-10-05T20:56:51.879859+00:00",
   "period": "daily",
   "sheet_id": "1MjdYPLGxXcPFbWJHRQ67ZbMlqfBsF44czsBdA_3Pb_o",
   "status": "OFF TRACK",
@@ -21,18 +21,18 @@
   "due_date": "2026-06-08",
   "operating_implication": "Run recovery action today (action overdue since 2026-06-08)",
   "required_activity_today": "Clean 22 no-next-step deals in operating pipelines; recover stale deals; create net-new pipeline",
-  "actual_activity_yesterday_today": "0 new pipeline / 12 modified",
+  "actual_activity_yesterday_today": "0 new pipeline / 13 modified",
   "risk_counts": {
     "open_deal_count": 139,
     "open_missing_next_step": 123,
-    "stale_open_deals_30d": 102,
-    "open_missing_next_activity": 134,
+    "stale_open_deals_30d": 103,
+    "open_missing_next_activity": 135,
     "missing_close_date": 295,
     "missing_owner": 154,
     "recent_meeting_activity_14d": 10,
-    "stale_open_deals_gt_30d": 102,
+    "stale_open_deals_gt_30d": 103,
     "open_deals_missing_next_step": 123,
-    "open_deals_missing_next_activity": 134,
+    "open_deals_missing_next_activity": 135,
     "deals_missing_close_date": 295,
     "deals_missing_owner": 154
   },
@@ -76,7 +76,7 @@
     "owner_date_discipline": 0.286
   },
   "data_quality_flags": [
-    "crm_forecast, actual_revenue, open_pipeline, weighted_pipeline, risk_counts, and per-pipeline counts verified live against HubSpot CRM (read-only API) at 2026-10-01T18:36:48.503879+00:00. HubSpot is canonical.",
+    "crm_forecast, actual_revenue, open_pipeline, weighted_pipeline, risk_counts, and per-pipeline counts verified live against HubSpot CRM (read-only API) at 2026-10-05T20:56:51.879859+00:00. HubSpot is canonical.",
     "RESOLVED CONTRADICTION: the Jun 10-11 $804K 'open pipeline drop' was a definition mismatch, not deal movement — the sheet snapshot script counts an open-deal universe 24 deals/$774K larger than hs_is_closed=false while weighted pipeline matches CRM to the dollar. Fix the script or accept the CRM definition (canonical per spec).",
     "capacity_model ($6,580,214, sheet Jun 11 13:57Z) is computed with SG ACV $100K; Eric set canonical ACV = $180K on 2026-06-11, so the sheet's capacity math is STALE until its assumption cell is updated (agents are read-only on Sheets).",
     "behavior_signals (Gong + Granola) carried from sheet refresh 2026-06-11T13:59Z; no Gong/Granola connector in this environment — STALE ~10.5h.",
@@ -87,7 +87,7 @@
     {
       "tab": "HubSpot Live (GitHub Action, read-only API aggregates)",
       "range": "DEAL aggregates, portal-wide and per-pipeline",
-      "refreshed_at_utc": "2026-10-01T18:36:48.503879+00:00"
+      "refreshed_at_utc": "2026-10-05T20:56:51.879859+00:00"
     },
     {
       "tab": "Dashboard",
